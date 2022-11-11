@@ -1,0 +1,219 @@
+@-webkit-keyframes cover_slideIn {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+
+@keyframes cover_slideIn {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+
+@-webkit-keyframes cover_slideOut {
+	0% {
+		margin-left: 0%;
+	}
+	100% {
+		margin-left: -100%;
+	}
+}
+
+@keyframes cover_slideOut {
+	0% {
+		margin-left: 0%;
+	}
+	100% {
+		margin-left: -100%;
+	}
+}
+
+@media screen and (min-width: 0px) {
+	.cover__screen,
+	.phone__menu {
+		position: fixed;
+		background-color: #3c3d3e63;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		width: 100%;
+		height: 100%;
+		margin-left: -100%;
+	}
+	.phone__menu {
+		width: 350px;
+		z-index: 5;
+		padding: 30px 20px;
+		background-color: white;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.phone__menu__top {
+			width: 100%;
+			padding-inline: 10px;
+			@include display(flex, space-between, center);
+			height: 50px;
+			.phone__menu__close {
+				width: 40px;
+				height: 40px;
+				background-color: $red;
+				border: none;
+				@include display(flex, center, center);
+				margin-left: auto;
+				border-radius: 5px;
+				font-weight: bold;
+				font-size: 18px;
+				&:hover {
+					background-color: $yellow;
+				}
+			}
+			.userInfo {
+				font-size: 14px;
+				padding-top: 10px;
+				width: auto;
+				.address {
+					height: 100%;
+					color: $elemBg;
+					@include display(flex, flex-start, center);
+					width: auto;
+					font-weight: bold;
+					.profile {
+						width: 30px;
+						height: 30px;
+						border-radius: 50%;
+						margin-right: 10px;
+						overflow: hidden;
+						outline: 2px solid $red;
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+					.badge {
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						background-color: #06ec46;
+						margin-left: 5px;
+					}
+				}
+				.balance {
+					opacity: 0.4;
+					text-align: right;
+					margin-left: 40px;
+				}
+			}
+		}
+		nav {
+			width: 100%;
+			height: auto;
+			margin-top: 10px;
+			ul {
+				width: 100%;
+				height: auto;
+				list-style-type: none;
+				a,
+				button {
+					text-decoration: none;
+					height: 50px;
+					text-transform: uppercase;
+					font-size: 12px;
+					font-weight: bold;
+					color: rgb(93, 91, 91);
+					@include display(flex, flex-start, center);
+					&:hover {
+						color: $yellow;
+					}
+					.icon {
+						width: 50px;
+						height: 100%;
+						@include display(flex, center, center);
+					}
+				}
+				button {
+					background-color: transparent;
+					width: 100%;
+					border: none;
+				}
+				.active {
+					color: $red;
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.cover__screen.logged {
+		display: none;
+	}
+	.phone__menu.logged {
+		margin-left: 0;
+		overflow-y: scroll;
+		height: 85vh;
+		width: 100%;
+		margin-top: -25px;
+		margin-left: -20px;
+		position: relative;
+		background-color: transparent;
+		.phone__menu__top {
+			height: auto;
+			margin-bottom: 0px;
+			margin-top: -10px;
+			.phone__menu__close {
+				display: none;
+			}
+			.userInfo {
+				.address {
+					color: white;
+					.profile {
+						display: none;
+					}
+				}
+				.balance {
+					margin-left: 0;
+					font-size: 12px;
+					margin-top: 5px;
+					color: white;
+				}
+			}
+		}
+		nav {
+			ul {
+				margin-top: -10px;
+				a,
+				button {
+					// background-color: green;
+					height: 35px;
+					opacity: 1;
+					color: white;
+					font-weight: bold;
+					margin-bottom: 5px;
+					&:hover {
+						color: red;
+					}
+					i {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.phone__menu.guest {
+		display: none;
+	}
+}

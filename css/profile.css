@@ -1,0 +1,1026 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Heebo:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(300deg, #130d34 80%, #9d328c 90%);
+    background: linear-gradient(150deg, #130d34 80%, #9d328c 90%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(290deg, #130d34 83%, #9d328c 93%);
+    background: linear-gradient(160deg, #130d34 83%, #9d328c 93%);
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+  }
+  .phone__menu .profile {
+    color: #00af50;
+  }
+  .phone__menu .profile:hover {
+    color: #00af50;
+  }
+  main {
+    width: 100%;
+    height: auto;
+    color: white;
+    padding-bottom: 50px;
+    position: relative;
+  }
+  main .includes {
+    height: 90px;
+  }
+  main #balance {
+    padding-right: 20px;
+  }
+  main #balance h3 {
+    text-align: right;
+    font-size: 16px;
+  }
+  main #balance h3 span {
+    color: yellow;
+    text-transform: uppercase;
+  }
+  main #card {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 30px;
+    background: #b62ce3;
+    background: -o-linear-gradient(310deg, #b62ce3 40%, #06ec46 60%);
+    background: linear-gradient(140deg, #b62ce3 40%, #06ec46 60%);
+    height: 200px;
+    padding: 30px;
+  }
+  main #card .name {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  main #card .council {
+    margin-top: 5px;
+  }
+  main #card .council p {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  main #card .address {
+    width: auto;
+    position: absolute;
+    bottom: 12px;
+    height: auto;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #card .address .eth {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #card .address .eth img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+  }
+  main #card .address .eth p {
+    font-family: "Cabin", sans-serif;
+  }
+  main #details {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  main #details p {
+    color: #b62ce3;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  main #details .detail {
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  main #details .detail .keyword {
+    width: 80px;
+    color: yellow;
+  }
+  main #details .detail .value {
+    color: white;
+    text-decoration: none;
+  }
+  main #settings {
+    width: 100%;
+    padding: 0 20px;
+    padding-bottom: 50px;
+    border-bottom: 5px solid white;
+    height: auto;
+    margin-top: 30px;
+  }
+  main #settings .verifications {
+    padding-bottom: 10px;
+  }
+  main #settings .verifications p {
+    color: #b62ce3;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  main #settings .verifications .phone,
+  main #settings .verifications .email,
+  main #settings .verifications .fa-authentication,
+  main #settings .verifications .kyc,
+  main #settings .verifications .dob {
+    margin-top: 20px;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #settings .verifications .phone p,
+  main #settings .verifications .email p,
+  main #settings .verifications .fa-authentication p,
+  main #settings .verifications .kyc p,
+  main #settings .verifications .dob p {
+    color: white;
+  }
+  main #settings .verifications .phone .status,
+  main #settings .verifications .email .status,
+  main #settings .verifications .fa-authentication .status,
+  main #settings .verifications .kyc .status,
+  main #settings .verifications .dob .status {
+    color: black;
+  }
+  main #settings .verifications .phone .status a,
+  main #settings .verifications .phone .status button,
+  main #settings .verifications .email .status a,
+  main #settings .verifications .email .status button,
+  main #settings .verifications .fa-authentication .status a,
+  main #settings .verifications .fa-authentication .status button,
+  main #settings .verifications .kyc .status a,
+  main #settings .verifications .kyc .status button,
+  main #settings .verifications .dob .status a,
+  main #settings .verifications .dob .status button {
+    background-color: white;
+    width: 80px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 30px;
+    border: none;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 13px;
+    color: black;
+  }
+  main #settings .verifications .phone .status a:hover,
+  main #settings .verifications .phone .status button:hover,
+  main #settings .verifications .email .status a:hover,
+  main #settings .verifications .email .status button:hover,
+  main #settings .verifications .fa-authentication .status a:hover,
+  main #settings .verifications .fa-authentication .status button:hover,
+  main #settings .verifications .kyc .status a:hover,
+  main #settings .verifications .kyc .status button:hover,
+  main #settings .verifications .dob .status a:hover,
+  main #settings .verifications .dob .status button:hover {
+    cursor: pointer;
+  }
+  main #settings .verifications .phone .status a,
+  main #settings .verifications .email .status a,
+  main #settings .verifications .fa-authentication .status a,
+  main #settings .verifications .kyc .status a,
+  main #settings .verifications .dob .status a {
+    text-decoration: none;
+    color: black;
+  }
+  main #settings .verifications .phone .status a:visited, main #settings .verifications .phone .status a:hover,
+  main #settings .verifications .email .status a:visited,
+  main #settings .verifications .email .status a:hover,
+  main #settings .verifications .fa-authentication .status a:visited,
+  main #settings .verifications .fa-authentication .status a:hover,
+  main #settings .verifications .kyc .status a:visited,
+  main #settings .verifications .kyc .status a:hover,
+  main #settings .verifications .dob .status a:visited,
+  main #settings .verifications .dob .status a:hover {
+    color: black;
+  }
+  main #settings .verifications .phone .status .verified,
+  main #settings .verifications .email .status .verified,
+  main #settings .verifications .fa-authentication .status .verified,
+  main #settings .verifications .kyc .status .verified,
+  main #settings .verifications .dob .status .verified {
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+  main #settings .verifications .phone .status .verified i,
+  main #settings .verifications .email .status .verified i,
+  main #settings .verifications .fa-authentication .status .verified i,
+  main #settings .verifications .kyc .status .verified i,
+  main #settings .verifications .dob .status .verified i {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  main #settings .verifications .add {
+    width: 100%;
+    min-height: 180px;
+    height: auto;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    border: 2px solid white;
+    margin-top: 10px;
+    display: none;
+  }
+  main #settings .report,
+  main #settings .transfer {
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  main #settings .report p,
+  main #settings .transfer p {
+    color: #b62ce3;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  main #settings .report a,
+  main #settings .transfer a {
+    background-color: white;
+    width: 80px;
+    height: 30px;
+    border: none;
+    font-weight: bold;
+    border-radius: 3px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;
+  }
+  main #edit {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  main #edit p {
+    color: yellow;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  main #edit .name,
+  main #edit .email,
+  main #edit .phone,
+  main #edit .address,
+  main #edit .dob {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  main #edit .name p,
+  main #edit .email p,
+  main #edit .phone p,
+  main #edit .address p,
+  main #edit .dob p {
+    color: white;
+    text-transform: uppercase;
+  }
+  main #edit .name a,
+  main #edit .email a,
+  main #edit .phone a,
+  main #edit .address a,
+  main #edit .dob a {
+    background-color: white;
+    border-radius: 3px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: black;
+  }
+  main #edit .edit {
+    width: 100%;
+    background-color: white;
+    min-height: 200px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: none;
+    padding-bottom: 20px;
+  }
+  main #edit .edit form {
+    padding: 10px 20px;
+  }
+  main #edit .edit form label,
+  main #edit .edit form input {
+    color: black;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  main #edit .edit form label span,
+  main #edit .edit form input span {
+    color: #00af50;
+    font-size: 14px;
+  }
+  main #edit .edit form input {
+    width: 90%;
+    border: 2px solid black;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  main #edit .edit form input:focus {
+    outline: none;
+  }
+  main #edit .edit form .errMessage {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #b62ce3;
+    display: none;
+  }
+  main #edit .edit form .form_actions {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 50px;
+  }
+  main #edit .edit form .form_actions .editPhone,
+  main #edit .edit form .form_actions .editEmail,
+  main #edit .edit form .form_actions button,
+  main #edit .edit form .form_actions .editFullName {
+    width: 30%;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #04001b;
+    border: none;
+    color: white;
+    margin-top: 20px;
+  }
+  main #edit .edit form .form_actions button {
+    border: none;
+    width: 20%;
+    margin-left: 10px;
+    background-color: transparent;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #fb0001;
+    text-underline-offset: 2px;
+  }
+  main #edit .password {
+    background-color: #06ec46;
+    display: block;
+    width: 200px;
+    height: 40px;
+    border: none;
+    margin: 30px auto 20px auto;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: black;
+  }
+  main .active {
+    border-bottom: 5px solid white;
+  }
+  main #proposals {
+    padding: 40px 0px 70px 0;
+    height: auto;
+  }
+  main #proposals h3 {
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+  }
+  main #proposals .heading {
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    margin-top: 20px;
+  }
+  main #proposals .heading h3 {
+    text-transform: uppercase;
+    color: black;
+  }
+  main #proposals .heading h3:nth-child(1), main #proposals .heading h3:nth-child(2) {
+    width: 30%;
+    height: 100%;
+    border-right: 3px solid #020017;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #proposals .heading h3:nth-child(2) h3 {
+    text-align: center;
+  }
+  main #proposals .heading h3:nth-child(2) {
+    width: 70%;
+    border-right: none;
+  }
+  main #proposals .content {
+    height: auto;
+  }
+  main #proposals .content .content_elem {
+    height: 200px;
+    border-bottom: 2px solid white;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #proposals .content .content_elem .status {
+    width: 30%;
+    height: 100%;
+    border-right: 3px solid white;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #proposals .content .content_elem .status .status_container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #proposals .content .content_elem .status .status_container i {
+    font-size: 18px;
+    color: black;
+  }
+  main #proposals .content .content_elem .status .approved {
+    background-color: green;
+  }
+  main #proposals .content .content_elem .status .pending {
+    background-color: grey;
+  }
+  main #proposals .content .content_elem .status .active {
+    background-color: white;
+  }
+  main #proposals .content .content_elem .status .active i {
+    color: black;
+  }
+  main #proposals .content .content_elem .status .disapproved {
+    background-color: red;
+  }
+  main #proposals .content .content_elem .proposal {
+    width: 70%;
+    height: auto;
+    padding: 10px;
+  }
+  main #proposals .content .content_elem .proposal .proposal_heading {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  main #proposals .content .content_elem .proposal .proposal_desc {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  main #proposals .content .content_elem .proposal .controls {
+    width: 100%;
+    height: auto;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #proposals .content .content_elem .proposal .controls a {
+    color: #b62ce3;
+    text-underline-offset: 2px;
+    display: block;
+  }
+  main #proposals .content .content_elem .proposal .controls button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 14px;
+    margin-left: 15px;
+    -webkit-text-decoration: 2px underline red;
+    text-decoration: 2px underline red;
+  }
+  main #proposals .content .seeMore {
+    background-color: white;
+    margin-right: 20px;
+    width: 140px;
+    height: 40px;
+    margin-left: auto;
+    margin-top: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .editsForm {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #130d34;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    padding-top: 100px;
+  }
+  .editsForm .container {
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
+  }
+  .editsForm .container h3 {
+    margin-bottom: 20px;
+    color: #b62ce3;
+    text-align: center;
+  }
+  .editsForm .container form {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .editsForm .container form label,
+  .editsForm .container form input {
+    display: block;
+  }
+  .editsForm .container form label {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+    color: white;
+  }
+  .editsForm .container form label span {
+    color: #00af50;
+    font-weight: normal;
+  }
+  .editsForm .container form input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 0 15px;
+    font-size: 16px;
+  }
+  .editsForm .container form input:focus {
+    outline: none;
+  }
+  .editsForm .container form p {
+    color: #b62ce3;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .editsForm .container form .err {
+    display: none;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #df12ac;
+  }
+  .editsForm .container form .title {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .editsForm .container form .title div {
+    width: 20%;
+    height: auto;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  .editsForm .container form .title div input {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+  .editsForm .container form ::-webkit-calendar-picker-indicator {
+    font-size: 20px;
+  }
+  .editsForm .container form ::-webkit-datetime-edit {
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+  .editsForm .container form ::-webkit-datetime-edit-text {
+    color: black;
+    padding: 0 5px;
+  }
+  .editsForm .container form .namePassword {
+    font-size: 18px;
+  }
+  .editsForm .container form ::-webkit-input-placeholder {
+    color: black;
+    opacity: 0.6;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .editsForm .container form ::-moz-placeholder {
+    color: black;
+    opacity: 0.6;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .editsForm .container form :-ms-input-placeholder {
+    color: black;
+    opacity: 0.6;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .editsForm .container form ::-ms-input-placeholder {
+    color: black;
+    opacity: 0.6;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .editsForm .container form ::placeholder {
+    color: black;
+    opacity: 0.6;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .editsForm .container form .form_controls {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .editsForm .container form .form_controls input,
+  .editsForm .container form .form_controls button {
+    width: 30%;
+    height: 90%;
+    background-color: #06ec46;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .editsForm .container form .form_controls input:hover,
+  .editsForm .container form .form_controls button:hover {
+    outline: none;
+  }
+  .editsForm .container form .form_controls input {
+    margin-right: 10px;
+  }
+  .editsForm .container form .form_controls button {
+    background-color: red;
+    color: white;
+  }
+  .editsForm .container .phone {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+  .editsForm .container .phone,
+  .editsForm .container .address {
+    position: relative;
+  }
+  .editsForm .container .phone .countries,
+  .editsForm .container .address .countries {
+    width: 60%;
+    padding: 0 10px 0 0;
+    border-radius: 5px;
+    height: 40px;
+    background: white;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .editsForm .container .phone .countries .countryName,
+  .editsForm .container .address .countries .countryName {
+    font-weight: bold;
+    width: 85%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;
+  }
+  .editsForm .container .phone .countries .countryName input,
+  .editsForm .container .address .countries .countryName input {
+    width: 100%;
+    height: 100%;
+  }
+  .editsForm .container .phone .countries .icon,
+  .editsForm .container .address .countries .icon {
+    width: 15px;
+    height: 15px;
+    margin-top: -5px;
+  }
+  .editsForm .container .phone .countries .icon i,
+  .editsForm .container .address .countries .icon i {
+    font-size: 16px;
+  }
+  .editsForm .container .phone .countriesHolder,
+  .editsForm .container .address .countriesHolder {
+    width: 80%;
+    height: 400px;
+    overflow-y: scroll;
+    background: white;
+    position: absolute;
+    left: 12px;
+    top: 90px;
+    padding: 10px;
+    display: none;
+    z-index: 3;
+  }
+  .editsForm .container .phone .countriesHolder .country,
+  .editsForm .container .address .countriesHolder .country {
+    width: 100%;
+    height: 30px;
+    background: white;
+    padding: 0 10px;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .editsForm .container .address .countriesHolder {
+    top: 115px;
+  }
+  .editsForm .container .phone .phoneInfo {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .editsForm .container .phone .phoneInfo .code {
+    width: 80px;
+    height: 35px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .editsForm .container .address .laterAdd {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+  main {
+    padding-bottom: 0;
+  }
+  main #card {
+    margin-top: 20px;
+  }
+  main #details,
+  main #settings,
+  main #edit {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  main #proposals {
+    padding-bottom: 10px;
+  }
+  .editsForm {
+    width: 100%;
+  }
+  .editsForm .container {
+    width: 55%;
+    max-width: 650px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  main.guest {
+    padding-top: 80px;
+    width: 1000px;
+    margin: 0 auto;
+  }
+  main.logged {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    max-width: 1270px;
+    margin-top: 30px;
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+  main.logged .includes {
+    width: 25%;
+    overflow-y: scroll;
+    height: 100%;
+    border-right: 2px solid white;
+  }
+  main.logged .includes::-webkit-scrollbar {
+    display: none;
+  }
+  main.logged #container {
+    width: 60%;
+    overflow-y: scroll;
+    height: 100%;
+    margin-left: 30px;
+  }
+  main.logged #container::-webkit-scrollbar {
+    display: none;
+  }
+  #edit .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+  }
+  #edit .content article {
+    width: 80%;
+  }
+  #proposals {
+    margin-bottom: 40px;
+  }
+}
+
+.phone__menu.logged .profile {
+  color: #00af50;
+}
+
+.phone__menu.logged .profile:hover {
+  color: #00af50;
+}

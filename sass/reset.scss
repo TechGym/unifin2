@@ -1,0 +1,81 @@
+@import "./includes/default";
+@media screen and (min-width: 0px) {
+	.container {
+		width: 100%;
+		padding: 10px;
+		height: 100vh;
+		@include display(flex, center, center);
+		.email {
+			width: 90%;
+			height: auto;
+			margin-top: 20px;
+			color: white;
+			font-family: "Cabin", sans-serif;
+			border: 2px solid white;
+			border-radius: 4px;
+			padding: 10px 20px;
+			padding-bottom: 50px;
+			margin: 0 auto;
+			h3 {
+				text-align: center;
+				color: white;
+				margin-bottom: 5px;
+			}
+			p {
+				margin-bottom: 10px;
+				font-size: 14px;
+				text-align: center;
+				color: $red;
+			}
+			form {
+				margin-top: 20px;
+				input,
+				label {
+					display: block;
+				}
+				label {
+					margin-bottom: 10px;
+					font-size: 14px;
+				}
+				input {
+					width: 100%;
+					height: 40px;
+					padding: 0 10px;
+					font-size: 16px;
+					margin-bottom: 20px;
+					&:focus {
+						outline: none;
+					}
+				}
+				.err {
+					color: #df12ac;
+					margin-top: -15px;
+					display: none;
+					margin-bottom: 15px;
+					text-align: left;
+				}
+				.form_controls {
+					@include display(flex, center, center);
+					width: 100%;
+					button {
+						background-color: transparent;
+						border-radius: 10px;
+						height: 40px;
+						color: white;
+						width: 40%;
+						border: none;
+						outline: none;
+						font-weight: bold;
+					}
+					.submit {
+						background-color: $red;
+					}
+					.cancel {
+						background-color: red;
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+}

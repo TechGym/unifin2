@@ -1,0 +1,167 @@
+@import "./includes/default";
+@media screen and (min-width: 0px) {
+	body {
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		@include display(flex, center, center);
+	}
+	* {
+		font-weight: bold;
+	}
+	.phone__menu {
+		.login {
+			color: $red;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	.container {
+		width: 90%;
+		height: auto;
+		border-radius: 5px;
+		overflow: hidden;
+		#logo {
+			width: 90px;
+			height: 90px;
+			margin: 20px auto;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.intro {
+			width: 100;
+			padding-bottom: 20px;
+			height: 15%;
+			border-bottom: 2px solid $red;
+			@include display(flex, center, center);
+			h1 {
+				font-size: 34px;
+				color: white;
+				font-family: "Inter", sans-serif;
+			}
+		}
+		form {
+			width: 100%;
+			height: 85%;
+			padding: 50px 20px;
+			.form_element {
+				width: 100%;
+				height: 40px;
+				border-radius: 5px;
+				@include display(flex, flex-start, center);
+				padding: 0 10px;
+				background-color: white;
+				margin-bottom: 20px;
+				.icon {
+					width: 10%;
+					height: 70%;
+					@include display(flex, center, center);
+					i {
+						font-size: 18px;
+						color: $descriptionSpan;
+					}
+				}
+				.eye {
+					i {
+						font-size: 16px;
+					}
+				}
+				input {
+					width: 90%;
+					height: 70%;
+					border: none;
+					margin-left: 10px;
+					font-size: 16px;
+					&:focus {
+						outline: none;
+					}
+				}
+			}
+			.forgotPassword {
+				text-align: right;
+				margin-bottom: 20px;
+				a {
+					text-decoration: underline;
+					text-underline-offset: 2px;
+					color: white;
+					&:hover {
+						color: $yellow;
+					}
+				}
+			}
+			.submit {
+				background-color: $red;
+				display: block;
+				border: none;
+				border-radius: 10px;
+				width: 150px;
+				margin: 30px auto;
+				height: 50px;
+				font-size: 20px;
+				font-weight: bold;
+				color: white;
+				&hover {
+					background-color: $yellow;
+					cursor: pointer;
+				}
+			}
+			.register {
+				color: $red;
+				a {
+					text-decoration: none;
+					margin-left: 10px;
+					color: white;
+					text-underline-offset: 2px;
+					text-decoration: underline;
+					&:hover {
+						color: $yellow;
+					}
+				}
+			}
+
+			label {
+				margin-left: 10px;
+				color: white;
+			}
+			input[type="checkbox"] {
+				accent-color: rgba(157, 50, 140, 1);
+			}
+			.error {
+				color: #e91919cb;
+				font-family: "Poppins", sans-serif;
+				font-size: 14px;
+				margin-top: -10px;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	.container {
+		width: 60%;
+		max-width: 600px;
+	}
+}
+@media screen and (min-width: 1025px) {
+	.container {
+		width: 650px;
+	}
+}
+
+.dark {
+	background: rgb(19, 13, 52);
+	background: -o-linear-gradient(
+		300deg,
+		rgba(19, 13, 52, 1) 80%,
+		rgba(157, 50, 140, 1) 90%
+	);
+	background: linear-gradient(
+		150deg,
+		rgba(19, 13, 52, 1) 80%,
+		rgba(157, 50, 140, 1) 90%
+	);
+}

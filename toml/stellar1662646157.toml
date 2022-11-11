@@ -1,0 +1,23 @@
+NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
+HORIZON_URL="https://horizon.domain.com"
+VERSION="2.0.0"
+
+ACCCOUNTS=["GDZIX3ILRUH4M242FNHRLKDVR72PGFKYLIXWQXYICF2MZOYPUVQL7WK4"] 
+
+[DOCUMENTATION]
+ ORG_NAME="aaaa"
+ ORG_URL="http://localhost/unifin/admin/asset_info?category=new"
+ ORG_LOGO="http://localhost/unifin/admin/asset_info?category=new"
+ ORG_OFFICIAL_EMAIL="aaa@ss.sss"
+ ORG_DESCRIPTION="http://localhost/unifin/admin/asset_info?category=new"
+ 
+[[PRINCIPALS]]
+ name="aaaaaa"
+ email="aaa@l.aaa"
+ 
+[[CURRENCIES]]
+ code="sfgnsg"
+ issuer="GDZIX3ILRUH4M242FNHRLKDVR72PGFKYLIXWQXYICF2MZOYPUVQL7WK4"
+ image="http://localhost/unifin/admin/asset_info?category=new"
+ desc="http://localhost/unifin/admin/asset_info?category=new"
+ 

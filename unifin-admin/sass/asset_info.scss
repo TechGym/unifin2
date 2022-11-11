@@ -1,0 +1,518 @@
+@import "../../sass/includes/default";
+@media screen and (min-width: 0px) {
+	body {
+		width: 100%;
+		height: auto;
+		@include display(flex, center, center);
+		position: relative;
+	}
+
+	* {
+		font-family: "Merriweather", sans-serif;
+		font-weight: bold;
+	}
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		height: auto;
+		border-radius: 5px;
+		#logo {
+			width: 90px;
+			height: 90px;
+			margin: 20px auto;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		p {
+			color: $red;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		.select {
+			width: 100%;
+			color: white;
+			padding-left: 20px;
+			margin-bottom: 30px;
+			text-align: left;
+		}
+
+		form {
+			width: 100%;
+			height: 95%;
+			background-color: transparent;
+			.form_element {
+				width: 100%;
+				height: auto;
+				border-radius: 5px;
+				padding: 0 10px;
+				margin-bottom: 20px;
+				position: relative;
+				.option {
+					width: 100%;
+					margin-bottom: 20px;
+					@include display(flex, flex-start, center);
+					label {
+						margin-left: 10px;
+						color: white;
+					}
+				}
+
+				input {
+					width: auto;
+					height: 70%;
+					border: none;
+					margin-left: 10px;
+					font-size: 16px;
+					display: block;
+					&:focus {
+						outline: none;
+					}
+				}
+			}
+
+			.controls {
+				width: 100%;
+				height: auto;
+				.proceed,
+				.exit {
+					background-color: $red;
+					display: block;
+					border: none;
+					border-radius: 10px;
+					width: 150px;
+					margin: 30px auto;
+					height: 50px;
+					font-size: 20px;
+					font-weight: bold;
+					color: white;
+				}
+				.exit {
+					background-color: transparent;
+					border: 1px solid grey;
+				}
+			}
+
+			.err {
+				color: #e91919cb;
+				font-size: 14px;
+				margin-top: -10px;
+				margin-bottom: 20px;
+				display: none;
+			}
+		}
+		.readMore {
+			color: white;
+			line-height: 30px;
+			a {
+				color: $red;
+			}
+		}
+	}
+	#editStart {
+		width: 100%;
+		height: 100vh;
+		background-color: $backgroundColor;
+		position: absolute;
+		top: 0;
+		color: white;
+		left: 0;
+		z-index: 3;
+		form {
+			width: 100%;
+			padding: 50px 20px;
+			height: 100%;
+			h3 {
+				text-align: center;
+			}
+			#content {
+				width: 100%;
+				height: auto;
+				min-height: 200px;
+				margin-top: 40px;
+				p {
+					margin-bottom: 30px;
+					color: $red;
+				}
+				.radio_option {
+					min-height: 50px;
+					height: auto;
+					margin-bottom: 20px;
+					label {
+						margin-left: 10px;
+					}
+					section {
+						margin: 20px 0 40px 0;
+						display: none;
+						width: 95%;
+						margin-left: 5%;
+						input {
+							width: 100%;
+							height: 40px;
+							padding: 0 20px;
+							border: none;
+							border-radius: 5px;
+							&:focus {
+								outline: none;
+							}
+						}
+						input[type="file"] {
+							padding: 10px 0;
+						}
+					}
+				}
+				.err {
+					color: red;
+					display: none;
+				}
+				input[type="submit"] {
+					width: 120px;
+					height: 40px;
+					@include display(flex, center, center);
+					margin: 20px auto;
+					border: none;
+					border-radius: 5px;
+					color: white;
+					background-color: $red;
+				}
+			}
+		}
+	}
+	main#steps {
+		width: 100%;
+		min-height: 100vh;
+		// background-color: red;
+		padding-top: 40px;
+		.heading {
+			text-align: center;
+			padding: 0 20px;
+			color: white;
+			font-size: larger;
+			margin-bottom: 10px;
+			.desc {
+				text-align: left;
+				margin-top: 20px;
+				font-size: 14px;
+				opacity: 0.5;
+			}
+		}
+		.content {
+			width: 100%;
+			height: auto;
+			form {
+				width: 100%;
+				height: auto;
+				padding: 0 20px;
+				label,
+				input,
+				textarea {
+					width: 100%;
+					height: auto;
+					display: block;
+					color: white;
+					margin-bottom: 10px;
+					padding: 20px 0;
+				}
+				label {
+					span {
+						font-size: 90%;
+						opacity: 0.8;
+						color: $red;
+					}
+					.required {
+						color: red;
+						margin-left: 3px;
+					}
+				}
+
+				textarea {
+					height: 200px;
+					padding: 10px;
+					overflow-y: scroll;
+					scroll-behavior: smooth;
+					resize: none;
+					color: black;
+					background-color: white;
+					border-radius: 5px;
+					font-size: 14px;
+
+					&:focus {
+						outline: none;
+					}
+				}
+				input,
+				textarea {
+					&::-webkit-input-placeholder {
+						opacity: 0.5;
+						opacity: 0.5;
+						line-height: 25px;
+						font-size: 14px;
+					}
+					&::-moz-placeholder {
+						opacity: 0.5;
+						line-height: 25px;
+						font-size: 14px;
+					}
+					&:-ms-input-placeholder {
+						opacity: 0.5;
+						line-height: 25px;
+						font-size: 14px;
+					}
+					&::-ms-input-placeholder {
+						opacity: 0.5;
+						line-height: 25px;
+						font-size: 12px;
+					}
+					&::placeholder {
+						opacity: 0.5;
+						line-height: 25px;
+						font-size: 14px;
+					}
+				}
+
+				.token_type {
+					width: 100%;
+					margin-top: 20px;
+					p {
+						text-align: left;
+						color: white;
+						margin-bottom: 10px;
+						span {
+							color: red;
+							margin-top: 3px;
+							font-size: 14px;
+						}
+					}
+					.option {
+						width: 100%;
+						height: 30px;
+						@include display(flex, flex-start, center);
+						input,
+						label {
+							margin: 0;
+						}
+						input {
+							width: 10%;
+						}
+					}
+				}
+
+				input[type="submit"],
+				.form_controls button {
+					width: 170px;
+					height: 45px;
+					padding: 0;
+					background-color: $red;
+					border: none;
+					@include display(flex, center, center);
+					margin: 20px auto;
+					margin-top: 50px;
+					border-radius: 5px;
+				}
+
+				.form_element {
+					height: auto;
+					// background-color: red;
+					width: 100%;
+					margin-bottom: 25px;
+					input {
+						height: 45px;
+						border-radius: 5px;
+						color: black;
+						padding: 0 10px;
+						&:focus {
+							outline: none;
+						}
+					}
+					textarea {
+						height: 200px;
+						resize: none;
+						width: 100%;
+					}
+					label {
+						height: 35px;
+					}
+				}
+
+				.err {
+					color: red;
+					display: none;
+					margin-top: 15px;
+					font-size: 14px;
+					margin-bottom: -15px;
+				}
+				.form_controls {
+					width: 100%;
+					height: auto;
+					@include display(flex, center, center);
+					button {
+						background-color: white;
+					}
+				}
+				.anchored_asset_form {
+					display: none;
+					width: 100%;
+					p {
+						color: white;
+						opacity: 0.7;
+					}
+				}
+			}
+		}
+		.information {
+			color: white;
+			padding: 20px;
+			font-size: 14px;
+			line-height: 25px;
+			a {
+				display: block;
+				color: $red;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+		.step {
+			.map {
+				width: 90%;
+				margin: 0 auto;
+				height: 50px;
+				margin-bottom: 10px;
+				@include display(flex, space-between, center);
+				div.circle {
+					width: 30px;
+					height: 30px;
+					background-color: white;
+					border-radius: 50%;
+					position: relative;
+					@include display(flex, center, center);
+					z-index: 2;
+				}
+				.line {
+					width: 20%;
+					height: 2px;
+					background-color: white;
+				}
+			}
+		}
+		.step1,
+		.step2,
+		.step3,
+		.step4 {
+			.map {
+				div {
+					&:first-child {
+						background-color: $red;
+						color: white;
+					}
+				}
+			}
+		}
+		.step4,
+		.step3,
+		.step2 {
+			display: none;
+		}
+
+		.step2,
+		.step3,
+		.step4 {
+			.map {
+				div {
+					&:nth-child(2),
+					&:nth-child(3) {
+						background-color: $red;
+						color: white;
+					}
+				}
+			}
+		}
+		.step3,
+		.step4 {
+			.map {
+				div {
+					&:nth-child(4),
+					&:nth-child(5) {
+						background-color: $red;
+						color: white;
+					}
+				}
+			}
+		}
+		.step4 {
+			.map {
+				div {
+					&:nth-child(6),
+					&:nth-child(7) {
+						background-color: $red;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	p.fileError {
+		color: white;
+	}
+	main#preview {
+		// background-color: white;
+		width: 100%;
+		height: 100vh;
+		overflow-y: scroll;
+		.top {
+			width: 100%;
+			height: 70px;
+			// background-color: white;
+			@include display(flex, space-between, center);
+			padding: 0 20px;
+			h3 {
+				color: white;
+			}
+			button {
+				border: none;
+				width: 40px;
+				height: 40px;
+				a {
+					text-decoration: none;
+					i {
+						color: black;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+		.content {
+			width: 100%;
+			min-height: 85vh;
+			height: auto;
+			margin-top: 30px;
+			background-color: white;
+			word-wrap: break-word;
+			padding: 20px;
+			font-size: 16px;
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	.container {
+		width: 60%;
+	}
+}
+@media screen and (min-width: 1025px) {
+	.container {
+		width: 800px;
+		form {
+			.submit {
+				&:hover {
+					background-color: $yellow;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+.dark {
+	background: rgb(19, 13, 52);
+}

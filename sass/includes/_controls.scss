@@ -1,0 +1,93 @@
+@media screen and(min-width:0px) {
+	#controls {
+		width: 100%;
+		height: auto;
+		position: fixed;
+		bottom: 0;
+		background: #130d34;
+
+		left: 0;
+		padding: 0 10px;
+		@include display(flex, space-between, center);
+		a {
+			width: 24%;
+			height: 75px;
+			padding-bottom: 5px;
+			border-radius: 5px;
+			background-color: #6f30a015;
+			color: #a6a6a6;
+			@include display(flex, center, center);
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 14px;
+			.image {
+				width: 70px;
+				height: 40px;
+				margin-bottom: 4px;
+				position: relative;
+
+				@include display(flex, center, center);
+				i {
+					font-size: 28px;
+				}
+				.voteCount {
+					position: absolute;
+					@include display(flex, center, center);
+					min-width: 20px;
+					width: auto;
+					height: 20px;
+					background-color: #7030a0;
+					right: 0px;
+					top: 2px;
+					font-size: 14px;
+					color: white;
+				}
+				img {
+					width: 50px;
+					margin-bottom: 5px;
+					height: 40px;
+				}
+			}
+		}
+		.voting {
+			.image {
+				padding-top: 5px;
+				img {
+					width: 40px;
+					height: 30px;
+				}
+			}
+		}
+		.twitter {
+			.image {
+				img {
+					width: 55px;
+					margin-top: 5px;
+					height: 50px;
+				}
+			}
+		}
+		.members {
+			.image {
+				img {
+					width: 45px;
+					height: 35px;
+					margin-top: 5px;
+				}
+			}
+		}
+		.sprint {
+			.image {
+				margin-top: 5px;
+				img {
+					width: 40px;
+					height: 35px;
+				}
+			}
+		}
+	}
+}

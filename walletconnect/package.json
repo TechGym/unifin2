@@ -1,0 +1,64 @@
+{
+	"name": "myapp",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@emotion/react": "^11.10.4",
+		"@emotion/styled": "^11.10.4",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.3.0",
+		"@testing-library/user-event": "^13.5.0",
+		"@walletconnect/qrcode-modal": "^1.8.0",
+		"@walletconnect/sign-client": "^2.0.0-rc.3",
+		"@walletconnect/types": "^2.0.0-rc.3",
+		"@walletconnect/utils": "2.0.0-rc.3",
+		"@walletconnect/web3-provider": "^1.5.0",
+		"axios": "^0.27.2",
+		"bignumber.js": "8.0.1",
+		"buffer": "^6.0.3",
+		"core-js": "^3.25.5",
+		"event-source-polyfill": "^1.0.31",
+		"https": "^1.0.0",
+		"https-browserify": "^1.0.0",
+		"pino": "^8.4.1",
+		"react": "^18.2.0",
+		"react-app-polyfill": "^3.0.0",
+		"react-dom": "^18.2.0",
+		"react-icons": "^4.4.0",
+		"react-router-dom": "^6.4.0",
+		"react-scripts": "5.0.1",
+		"stellar-sdk": "^10.1.2",
+		"uri": "^0.1.0",
+		"url": "^0.11.0",
+		"util": "^0.12.4",
+		"web-vitals": "^2.1.4"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build ",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"styles": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css -w"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.1.8"
+	}
+}

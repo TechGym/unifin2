@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Heebo:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(300deg, #130d34 80%, #9d328c 90%);
+    background: linear-gradient(150deg, #130d34 80%, #9d328c 90%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(290deg, #130d34 83%, #9d328c 93%);
+    background: linear-gradient(160deg, #130d34 83%, #9d328c 93%);
+  }
+}
+
+@media screen and (min-width: 0px) {
+  body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+  }
+  * {
+    font-weight: bold;
+  }
+  .container {
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .container #logo {
+    width: 90px;
+    height: 90px;
+    margin: 20px auto;
+  }
+  .container #logo img {
+    width: 100%;
+    height: 100%;
+  }
+  .container main {
+    width: 100%;
+    height: auto;
+  }
+  .container main .intro {
+    width: 100;
+    padding-bottom: 20px;
+    height: 15%;
+    border-bottom: 2px solid #00af50;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .container main .intro h1 {
+    font-size: 34px;
+    color: white;
+    font-family: "Inter", sans-serif;
+  }
+  .container main form {
+    width: 100%;
+    height: 95%;
+    padding: 50px 20px;
+    background-color: transparent;
+  }
+  .container main form .form_element {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .container main form .form_element label {
+    font-size: 14px;
+    margin: 0;
+    color: white;
+  }
+  .container main form .form_element label span {
+    color: #00af50;
+  }
+  .container main form .form_element .content {
+    margin-top: 5px;
+    padding: 0 10px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 35px;
+    background-color: white;
+  }
+  .container main form .form_element .content .icon {
+    width: 10%;
+    height: 70%;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .container main form .form_element .content .icon i {
+    font-size: 16px;
+    color: #858e93;
+  }
+  .container main form .form_element .content .eye i {
+    font-size: 16px;
+  }
+  .container main form .form_element .content input,
+  .container main form .form_element .content select {
+    width: 90%;
+    height: 70%;
+    border: none;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .container main form .form_element .content input:focus,
+  .container main form .form_element .content select:focus {
+    outline: none;
+  }
+  .container main form .forUs {
+    display: none;
+  }
+  .container main form .submit {
+    background-color: #00af50;
+    opacity: 0.5;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    margin: 30px auto;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  .container main form .login {
+    color: #00af50;
+  }
+  .container main form .login a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    margin-left: 10px;
+    color: white;
+  }
+  .container main form .login a:hover {
+    color: #fb0001;
+  }
+  .container main form .err {
+    color: #e91919cb;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    position: absolute;
+    background-color: #3c3d3e63;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: none;
+  }
+  .container main form .err .container {
+    width: 95%;
+    max-width: 500px;
+    border-radius: 5px;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .container main form .err .container p {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+  }
+  .container main form .err .container button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00af50;
+    color: white;
+    display: block;
+    margin: 20px auto;
+  }
+  .container main form .logErr {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .container main form .suggestions {
+    display: none;
+    width: 100%;
+    min-height: 80px;
+    height: auto;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 3;
+    border-radius: 5px;
+    padding: 20px 20px 0 20px;
+    background-color: #04001b;
+  }
+  .container main form .suggestions ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+  }
+  .container main form .suggestions ul li {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+    color: white;
+    font-weight: bold;
+  }
+  .container main form .suggestions ul li:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  .container main form .suggestions ul li:last-child {
+    border-bottom: none;
+  }
+  .container main form label {
+    margin-left: 10px;
+    color: white;
+  }
+  .container main form label a {
+    color: #9d328c;
+    text-decoration: none;
+  }
+  .container main form input[type="checkbox"] {
+    accent-color: #9d328c;
+  }
+  .container main .recaptcha {
+    width: 100%;
+    height: 70vh;
+    margin: 0 auto;
+    background: #130d34;
+  }
+  .container main .recaptcha h3 {
+    color: #00af50;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .container main .recaptcha form {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .container main .recaptcha form .error {
+    color: red;
+    display: none;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .container main .recaptcha form .g-recapture {
+    width: 80%;
+    background-color: pink;
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .container main .recaptcha form .g-recapture div {
+    width: 100%;
+  }
+  .container main .recaptcha form .g-recapture div iframe {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 65%;
+  }
+  .container main .recaptcha form {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 800px;
+  }
+  .container main form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+  }
+  .container main form .submit {
+    grid-column: 1/3;
+    width: 350px;
+  }
+  .container main form .submit:hover {
+    background-color: #fb0001;
+    cursor: pointer;
+  }
+  .container main form .form_element select {
+    width: 60%;
+  }
+  .container main form .form_element select option {
+    width: 60%;
+  }
+  .container main form .country {
+    grid-column: 1/3;
+  }
+  .container main form .forUs {
+    grid-column: 1/3;
+    display: grid;
+    gap: 5px 20px;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .container main form .forUs .form_element:last-child {
+    grid-column: 1/3;
+  }
+}
+
+.dark {
+  background: #130d34;
+}

@@ -1,0 +1,14 @@
+<IfModule mod_headers.c>
+	Header set Cache-Control "no-cache , no-store, must-revalidate"
+        Header set Pragma "no-cache"  
+        Header set Expires "0"
+</IfModule>
+
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(register|login|dashboard|proposals|referral|profile|campaign|votes|map|kyc|verifications|changepassword|faq) $1.php [NC] 
+RewriteRule ^home index.php [NC] 
+RewriteRule ^(reportcompromised|contact|whitepaper|reset|swap|payment) $1.php [NC]
+RewriteRule ^admin vp-admin.php [NC]
+RewriteRule ^unifin-admin/(create_asset|asset_info|send_tip|metrics) unifin-admin/$1.php

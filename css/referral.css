@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Heebo:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(300deg, #130d34 80%, #9d328c 90%);
+    background: linear-gradient(150deg, #130d34 80%, #9d328c 90%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(290deg, #130d34 83%, #9d328c 93%);
+    background: linear-gradient(160deg, #130d34 83%, #9d328c 93%);
+  }
+}
+
+@media screen and (min-width: 0px) {
+  body {
+    min-height: 100vh;
+    height: auto;
+  }
+  .phone__menu .referrals {
+    color: #00af50;
+  }
+  .phone__menu .referrals:hover {
+    color: #00af50;
+  }
+  main {
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
+    color: white;
+    margin-top: 20px;
+    padding-bottom: 200px;
+  }
+  main .top {
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+  }
+  main .top .referral_count {
+    height: auto;
+    min-width: 40px;
+    max-width: 70px;
+    margin-left: auto;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  main .top .referral_count i {
+    font-size: 24px;
+  }
+  main .top .referral_count .description {
+    color: yellow;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  main .top h3 {
+    margin: 0;
+  }
+  main .top .referral_team {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  main p {
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
+  main p span {
+    text-transform: none;
+    color: yellow;
+    font-weight: bold;
+  }
+  main .referPeople {
+    margin-top: 20px;
+    color: #a6a6a6;
+    margin-bottom: 10px;
+  }
+  main .referPeople p {
+    text-transform: none;
+    margin-bottom: 10px;
+  }
+  main .referPeople p::first-letter {
+    text-transform: uppercase;
+  }
+  main .referPeople p a {
+    color: #00af50;
+  }
+  main .referPeople p .link {
+    color: #00af50;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  main .referPeople .referralLink {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid white;
+    padding: 5px 10px;
+    position: relative;
+    margin: 10px 0;
+  }
+  main .referPeople .referralLink .icon {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main .referPeople .referralLink .icon i {
+    color: white;
+  }
+  main .referPeople .referralLink .icon i[class*="fa-solid"] {
+    color: #00af50;
+  }
+  main .referPeople .referralLink p span.note {
+    color: yellow;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  main .referPeople .referralLink p span.link {
+    display: block;
+    margin-top: 3px;
+    word-break: break-all;
+    margin-left: 0;
+  }
+  main #referrals .heading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  main #referrals .heading div {
+    color: yellow;
+  }
+  main #referrals .heading .name {
+    margin-right: 30px;
+  }
+  main #referrals .heading .status {
+    margin-right: 25px;
+  }
+  main #referrals .content {
+    min-height: 200px;
+    padding-left: 10px;
+  }
+  main #referrals .content .referral {
+    width: 100%;
+    height: auto;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  main #referrals .content .referral .index {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: #b62ce3;
+  }
+  main #referrals .content .referral:nth-child(odd) .index {
+    color: black;
+    background-color: white;
+  }
+  main #referrals .content .referral .name {
+    width: 70%;
+    text-align: center;
+    height: auto;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  main #referrals .content .referral .status {
+    font-weight: bold;
+    background-color: #00af50;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: auto;
+    padding: 0 10px;
+    height: 30px;
+  }
+  main .noRef {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+    line-height: 25px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .dark {
+    background-color: #020017;
+  }
+}
+
+.dark {
+  background: #130d34;
+}
+
+@media screen and (min-width: 1025px) {
+  main {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  main .includes {
+    border-right: 2px solid white;
+    width: 35%;
+    height: 100vh;
+  }
+  main #container {
+    margin-left: 30px;
+    width: 85%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 70px;
+    position: relative;
+    bottom: 3px;
+  }
+  main #container::-webkit-scrollbar {
+    display: none;
+  }
+  main #container .referPeople {
+    font-size: 14px;
+  }
+  main #container #referrals,
+  main #container .noRef {
+    height: auto;
+    font-size: 14px;
+    min-height: 300px;
+  }
+  main #container .noRef {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  main #container #controls {
+    position: -webkit-sticky;
+    position: sticky;
+    font-size: 14px;
+  }
+  main #container #controls a {
+    padding-bottom: 10px;
+  }
+  main #container #controls a div {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  main #container #controls a p {
+    margin-top: 7px;
+    font-size: 12px;
+  }
+  .phone__menu.logged .referrals {
+    color: #00af50;
+  }
+  .phone__menu.logged .referrals:hover {
+    color: #00af50;
+  }
+}

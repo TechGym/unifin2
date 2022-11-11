@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Heebo:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(300deg, #130d34 80%, #9d328c 90%);
+    background: linear-gradient(150deg, #130d34 80%, #9d328c 90%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(290deg, #130d34 83%, #9d328c 93%);
+    background: linear-gradient(160deg, #130d34 83%, #9d328c 93%);
+  }
+}
+
+@media screen and (min-width: 0) {
+  .dark {
+    background: #130d34;
+  }
+  body {
+    overflow-y: hidden;
+  }
+  main {
+    width: 100%;
+    height: 900px;
+    padding: 20px;
+    position: relative;
+  }
+  main #select_payment {
+    width: 100%;
+    height: 100%;
+  }
+  main #select_payment h3 {
+    text-transform: uppercase;
+    text-align: left;
+    color: #df12ac;
+    margin-bottom: 20px;
+  }
+  main #select_payment form {
+    width: 100%;
+    height: auto;
+  }
+  main #select_payment form .option {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #select_payment form .option label {
+    color: white;
+    margin-left: 10px;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+  }
+  main #select_payment form .option input {
+    width: 20px;
+    display: block;
+    height: 20px;
+  }
+  main #select_payment form .err {
+    color: #e91919cb;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  main #select_payment form .submit {
+    background-color: #00af50;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    margin: 30px auto;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  main #instructions {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    padding: 20px;
+  }
+  main #instructions h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #00af50;
+    margin-bottom: 20px;
+  }
+  main #instructions .instruction {
+    width: 100%;
+    height: auto;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  main #instructions .instruction div {
+    color: white;
+    font-size: 14px;
+  }
+  main #instructions .instruction .index {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  main #instructions .proceed_to_payment {
+    color: white;
+    background-color: #00af50;
+    width: 250px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    height: 40px;
+  }
+  main #payment {
+    width: 90%;
+    height: 80vh;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: -200%;
+    right: 0;
+    margin: 0 auto;
+  }
+  main #payment form {
+    width: 100%;
+    height: 100%;
+  }
+  main #payment form .actualFormHere {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+    background-color: green;
+  }
+  main #payment form button,
+  main #payment form input[type="submit"] {
+    display: block;
+    height: 40px;
+    margin: 20px auto;
+    border: 2px solid white;
+    border-radius: 3px;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: white;
+    background-color: transparent;
+    padding: 5px 10px;
+  }
+  main #payment form input[type="submit"] {
+    margin: 0px auto;
+    background-color: #00af50;
+    width: 170px;
+    border: none;
+    padding: 5px 20px;
+    color: black;
+  }
+  @-webkit-keyframes animatePaymentIn {
+    0% {
+      left: -200%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
+  @keyframes animatePaymentIn {
+    0% {
+      left: -200%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
+  @-webkit-keyframes animatePaymentOut {
+    0% {
+      left: 0%;
+    }
+    100% {
+      left: -200%;
+    }
+  }
+  @keyframes animatePaymentOut {
+    0% {
+      left: 0%;
+    }
+    100% {
+      left: -200%;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "soneso/stellar-php-sdk": "^0.7.4",
+        "paragonie/sodium_compat": "^1.17"
+    }
+}

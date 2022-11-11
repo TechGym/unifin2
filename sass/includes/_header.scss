@@ -1,0 +1,276 @@
+@media screen and (min-width: 0px) {
+	.header_container {
+		width: 100%;
+		height: 70px;
+
+		header {
+			width: 100%;
+			@include display(flex, space-between, center);
+			height: 100px;
+			padding: 15px 25px;
+			.desktop {
+				display: none;
+			}
+			.header__logo {
+				width: auto;
+				height: 80%;
+				@include display(flex, flex-start, center);
+				h1 {
+					font-size: 34px;
+				}
+				img {
+					width: 60px;
+					height: 80%;
+				}
+			}
+			.header__right {
+				width: 80px;
+				height: 50%;
+				@include display(flex, space-between, center);
+				-webkit-transition: all 0.5s ease-in-out;
+				-o-transition: all 0.5s ease-in-out;
+				transition: all 0.5s ease-in-out;
+				.notification {
+					width: 20px;
+					height: 20px;
+					i.filled {
+						color: red;
+					}
+					i.empty {
+						color: #b62ce3;
+						opacity: 0.5;
+					}
+				}
+				.menu__btn {
+					width: 50px;
+					height: 100%;
+					@include display(flex, center, center);
+					border-radius: 10px;
+					border: none;
+					margin-left: auto;
+					i {
+						font-size: 25px;
+						-webkit-transition: all 0.5s ease-in-out;
+						-o-transition: all 0.5s ease-in-out;
+						transition: all 0.5s ease-in-out;
+						color: black;
+					}
+				}
+			}
+			.notification {
+				i {
+					color: #b62ce3;
+				}
+			}
+			.profile {
+				width: 40px;
+				height: 40px;
+				background-color: white;
+				border: 2px solid grey;
+				border-radius: 50%;
+				@include display(flex, center, center);
+				i {
+					font-size: 20px;
+					color: grey;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1025px) {
+	div.guest {
+		width: 100%;
+		height: auto;
+		z-index: 6;
+		position: fixed;
+		top: 0;
+		left: 0;
+		header {
+			width: 100%;
+			margin-top: 20px;
+			height: 70px;
+			margin: 0 auto;
+			.header__logo {
+				img {
+					height: 50px;
+				}
+			}
+			.desktop {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+			}
+			nav {
+				height: 50px;
+				width: 40%;
+				@include display(flex, space-between, center);
+				-ms-flex-item-align: center;
+				align-self: center;
+				margin: 0 auto;
+				margin-top: 0px;
+				a {
+					text-transform: uppercase;
+					text-decoration: none;
+					font-size: 13px;
+					font-weight: bold;
+					color: white;
+				}
+			}
+			.header__right {
+				width: 22%;
+				height: 45px;
+				margin-top: 0px;
+				@include display(flex, space-between, center);
+				p {
+					font-size: 14px;
+					a {
+						color: white;
+						text-decoration: none;
+						font-weight: bold;
+					}
+				}
+
+				.phone {
+					display: none;
+				}
+				.notification {
+					width: 25px;
+					height: 25px;
+					// margin-right: 20px;
+				}
+				.whitepaper {
+					width: 85%;
+					height: 100%;
+					border-radius: 25px;
+					background: $red;
+					margin-left: auto;
+					@include display(flex, center, center);
+					&:hover {
+						cursor: pointer;
+						margin-top: -10px;
+						-webkit-transition: all 1s ease;
+						-o-transition: all 1s ease;
+						transition: all 1s ease;
+					}
+				}
+			}
+		}
+	}
+
+	div.logged {
+		width: 100%;
+		height: 55px;
+		position: relative;
+
+		// left: 4.8%;
+		top: 0;
+		z-index: 3;
+
+		header {
+			width: 100%;
+			height: 70px;
+			display: block;
+			padding-top: 40px;
+			position: relative;
+			left: 0;
+			top: 0;
+			.header__logo {
+				width: 80%;
+				height: 60px;
+				margin: 0;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				img {
+					height: 45px;
+					width: 45px;
+				}
+				h1 {
+					margin-left: 20px;
+				}
+			}
+			.profile {
+				display: none;
+			}
+			.header__right {
+				display: none;
+			}
+		}
+		.header__logo {
+			margin-top: 20px;
+		}
+	}
+}
+@media screen and (min-width: 1170px) {
+	div.guest {
+		width: 100%;
+		height: auto;
+		header {
+			width: 1150px;
+			margin: 0 auto;
+			padding: 0;
+			nav {
+				margin-top: 17px;
+			}
+		}
+	}
+	div.logged {
+		header {
+			.header__right {
+				.desktop {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// Colors
+@media screen and (min-width: 0px) {
+	.dark {
+		.header_container {
+			header {
+				.header__logo {
+					h1 {
+						color: white;
+						text-shadow: 4px 5px 3px #df12ac;
+					}
+				}
+				.header__right {
+					.menu__btn {
+						background-color: $red;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1025px) {
+	.dark {
+		.header_container {
+			background: rgb(19, 13, 52);
+			-webkit-box-shadow: 0 1px 3px rgb(19, 13, 52);
+			// background-color: red;
+			box-shadow: 0 1px 3px rgb(19, 13, 52);
+
+			nav {
+				a {
+					color: white;
+					&:hover {
+						color: $yellow;
+					}
+				}
+			}
+			.header__right {
+				p {
+					color: white;
+				}
+				.whitepaper {
+					&:hover {
+						background-color: $yellow;
+					}
+				}
+			}
+		}
+	}
+}

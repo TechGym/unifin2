@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Heebo:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(300deg, #130d34 80%, #9d328c 90%);
+    background: linear-gradient(150deg, #130d34 80%, #9d328c 90%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(290deg, #130d34 83%, #9d328c 93%);
+    background: linear-gradient(160deg, #130d34 83%, #9d328c 93%);
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main.container {
+    width: 90%;
+    height: auto;
+    min-height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  main.container h3 {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  main.container p {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  main.container table,
+  main.container tr,
+  main.container td,
+  main.container th {
+    border: 1px solid black;
+    font-weight: bold;
+  }
+  main.container table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  main.container table tr {
+    width: 100%;
+    height: 40px;
+  }
+  main.container table tr td {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dark {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main.container {
+    width: 50%;
+    max-width: 500px;
+  }
+}

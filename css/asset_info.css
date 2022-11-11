@@ -1,0 +1,561 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Heebo:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(300deg, #130d34 80%, #9d328c 90%);
+    background: linear-gradient(150deg, #130d34 80%, #9d328c 90%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(290deg, #130d34 83%, #9d328c 93%);
+    background: linear-gradient(160deg, #130d34 83%, #9d328c 93%);
+  }
+}
+
+@media screen and (min-width: 0px) {
+  body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+  }
+  * {
+    font-family: "Merriweather", sans-serif;
+    font-weight: bold;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    border-radius: 5px;
+  }
+  .container #logo {
+    width: 90px;
+    height: 90px;
+    margin: 20px auto;
+  }
+  .container #logo img {
+    width: 100%;
+    height: 100%;
+  }
+  .container p {
+    color: #00af50;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .container .select {
+    width: 100%;
+    color: white;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .container form {
+    width: 100%;
+    height: 95%;
+    background-color: transparent;
+  }
+  .container form .form_element {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .container form .form_element .option {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .container form .form_element .option label {
+    margin-left: 10px;
+    color: white;
+  }
+  .container form .form_element input {
+    width: auto;
+    height: 70%;
+    border: none;
+    margin-left: 10px;
+    font-size: 16px;
+    display: block;
+  }
+  .container form .form_element input:focus {
+    outline: none;
+  }
+  .container form .controls {
+    width: 100%;
+    height: auto;
+  }
+  .container form .controls .proceed,
+  .container form .controls .exit {
+    background-color: #00af50;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    margin: 30px auto;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  .container form .controls .exit {
+    background-color: transparent;
+    border: 1px solid grey;
+  }
+  .container form .err {
+    color: #e91919cb;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    display: none;
+  }
+  .container .readMore {
+    color: white;
+    line-height: 30px;
+  }
+  .container .readMore a {
+    color: #00af50;
+  }
+  #editStart {
+    width: 100%;
+    height: 100vh;
+    background-color: #020017;
+    position: absolute;
+    top: 0;
+    color: white;
+    left: 0;
+    z-index: 3;
+  }
+  #editStart form {
+    width: 100%;
+    padding: 50px 20px;
+    height: 100%;
+  }
+  #editStart form h3 {
+    text-align: center;
+  }
+  #editStart form #content {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    margin-top: 40px;
+  }
+  #editStart form #content p {
+    margin-bottom: 30px;
+    color: #00af50;
+  }
+  #editStart form #content .radio_option {
+    min-height: 50px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  #editStart form #content .radio_option label {
+    margin-left: 10px;
+  }
+  #editStart form #content .radio_option section {
+    margin: 20px 0 40px 0;
+    display: none;
+    width: 95%;
+    margin-left: 5%;
+  }
+  #editStart form #content .radio_option section input {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  #editStart form #content .radio_option section input:focus {
+    outline: none;
+  }
+  #editStart form #content .radio_option section input[type="file"] {
+    padding: 10px 0;
+  }
+  #editStart form #content .err {
+    color: red;
+    display: none;
+  }
+  #editStart form #content input[type="submit"] {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #00af50;
+  }
+  main#steps {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 40px;
+  }
+  main#steps .heading {
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+    font-size: larger;
+    margin-bottom: 10px;
+  }
+  main#steps .heading .desc {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.5;
+  }
+  main#steps .content {
+    width: 100%;
+    height: auto;
+  }
+  main#steps .content form {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+  }
+  main#steps .content form label,
+  main#steps .content form input,
+  main#steps .content form textarea {
+    width: 100%;
+    height: auto;
+    display: block;
+    color: white;
+    margin-bottom: 10px;
+    padding: 20px 0;
+  }
+  main#steps .content form label span {
+    font-size: 90%;
+    opacity: 0.8;
+    color: #00af50;
+  }
+  main#steps .content form label .required {
+    color: red;
+    margin-left: 3px;
+  }
+  main#steps .content form textarea {
+    height: 200px;
+    padding: 10px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    resize: none;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  main#steps .content form textarea:focus {
+    outline: none;
+  }
+  main#steps .content form input::-webkit-input-placeholder,
+  main#steps .content form textarea::-webkit-input-placeholder {
+    opacity: 0.5;
+    opacity: 0.5;
+    line-height: 25px;
+    font-size: 14px;
+  }
+  main#steps .content form input::-moz-placeholder,
+  main#steps .content form textarea::-moz-placeholder {
+    opacity: 0.5;
+    line-height: 25px;
+    font-size: 14px;
+  }
+  main#steps .content form input:-ms-input-placeholder,
+  main#steps .content form textarea:-ms-input-placeholder {
+    opacity: 0.5;
+    line-height: 25px;
+    font-size: 14px;
+  }
+  main#steps .content form input::-ms-input-placeholder,
+  main#steps .content form textarea::-ms-input-placeholder {
+    opacity: 0.5;
+    line-height: 25px;
+    font-size: 12px;
+  }
+  main#steps .content form input::placeholder,
+  main#steps .content form textarea::placeholder {
+    opacity: 0.5;
+    line-height: 25px;
+    font-size: 14px;
+  }
+  main#steps .content form .token_type {
+    width: 100%;
+    margin-top: 20px;
+  }
+  main#steps .content form .token_type p {
+    text-align: left;
+    color: white;
+    margin-bottom: 10px;
+  }
+  main#steps .content form .token_type p span {
+    color: red;
+    margin-top: 3px;
+    font-size: 14px;
+  }
+  main#steps .content form .token_type .option {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main#steps .content form .token_type .option input,
+  main#steps .content form .token_type .option label {
+    margin: 0;
+  }
+  main#steps .content form .token_type .option input {
+    width: 10%;
+  }
+  main#steps .content form input[type="submit"],
+  main#steps .content form .form_controls button {
+    width: 170px;
+    height: 45px;
+    padding: 0;
+    background-color: #00af50;
+    border: none;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 20px auto;
+    margin-top: 50px;
+    border-radius: 5px;
+  }
+  main#steps .content form .form_element {
+    height: auto;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  main#steps .content form .form_element input {
+    height: 45px;
+    border-radius: 5px;
+    color: black;
+    padding: 0 10px;
+  }
+  main#steps .content form .form_element input:focus {
+    outline: none;
+  }
+  main#steps .content form .form_element textarea {
+    height: 200px;
+    resize: none;
+    width: 100%;
+  }
+  main#steps .content form .form_element label {
+    height: 35px;
+  }
+  main#steps .content form .err {
+    color: red;
+    display: none;
+    margin-top: 15px;
+    font-size: 14px;
+    margin-bottom: -15px;
+  }
+  main#steps .content form .form_controls {
+    width: 100%;
+    height: auto;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main#steps .content form .form_controls button {
+    background-color: white;
+  }
+  main#steps .content form .anchored_asset_form {
+    display: none;
+    width: 100%;
+  }
+  main#steps .content form .anchored_asset_form p {
+    color: white;
+    opacity: 0.7;
+  }
+  main#steps .information {
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  main#steps .information a {
+    display: block;
+    color: #00af50;
+  }
+  main#steps .information a:hover {
+    cursor: pointer;
+  }
+  main#steps .step .map {
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main#steps .step .map div.circle {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 2;
+  }
+  main#steps .step .map .line {
+    width: 20%;
+    height: 2px;
+    background-color: white;
+  }
+  main#steps .step1 .map div:first-child,
+  main#steps .step2 .map div:first-child,
+  main#steps .step3 .map div:first-child,
+  main#steps .step4 .map div:first-child {
+    background-color: #00af50;
+    color: white;
+  }
+  main#steps .step4,
+  main#steps .step3,
+  main#steps .step2 {
+    display: none;
+  }
+  main#steps .step2 .map div:nth-child(2), main#steps .step2 .map div:nth-child(3),
+  main#steps .step3 .map div:nth-child(2),
+  main#steps .step3 .map div:nth-child(3),
+  main#steps .step4 .map div:nth-child(2),
+  main#steps .step4 .map div:nth-child(3) {
+    background-color: #00af50;
+    color: white;
+  }
+  main#steps .step3 .map div:nth-child(4), main#steps .step3 .map div:nth-child(5),
+  main#steps .step4 .map div:nth-child(4),
+  main#steps .step4 .map div:nth-child(5) {
+    background-color: #00af50;
+    color: white;
+  }
+  main#steps .step4 .map div:nth-child(6), main#steps .step4 .map div:nth-child(7) {
+    background-color: #00af50;
+    color: white;
+  }
+  p.fileError {
+    color: white;
+  }
+  main#preview {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  main#preview .top {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+  main#preview .top h3 {
+    color: white;
+  }
+  main#preview .top button {
+    border: none;
+    width: 40px;
+    height: 40px;
+  }
+  main#preview .top button a {
+    text-decoration: none;
+  }
+  main#preview .top button a i {
+    color: black;
+    font-size: 18px;
+  }
+  main#preview .content {
+    width: 100%;
+    min-height: 85vh;
+    height: auto;
+    margin-top: 30px;
+    background-color: white;
+    word-wrap: break-word;
+    padding: 20px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 800px;
+  }
+  .container form .submit:hover {
+    background-color: #fb0001;
+    cursor: pointer;
+  }
+}
+
+.dark {
+  background: #130d34;
+}

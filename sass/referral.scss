@@ -1,0 +1,266 @@
+@import "./includes/default";
+@media screen and (min-width: 0px) {
+	body {
+		min-height: 100vh;
+		height: auto;
+	}
+	.phone__menu {
+		.referrals {
+			color: $red;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	main {
+		width: 100%;
+		height: auto;
+		padding: 0 30px;
+		color: white;
+		margin-top: 20px;
+		padding-bottom: 200px;
+		.top {
+			@include display(flex, space-between, center);
+			height: 70px;
+			width: 100%;
+			.referral_count {
+				height: auto;
+				min-width: 40px;
+				max-width: 70px;
+
+				margin-left: auto;
+				@include display(flex, center, center);
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				i {
+					font-size: 24px;
+				}
+				.description {
+					color: yellow;
+					font-weight: bold;
+					margin: 0 auto;
+					margin-top: 10px;
+				}
+			}
+			h3 {
+				margin: 0;
+			}
+			.referral_team {
+				font-size: 16px;
+				text-transform: uppercase;
+			}
+		}
+
+		p {
+			margin-top: 20px;
+			text-transform: capitalize;
+			span {
+				text-transform: none;
+				color: yellow;
+				font-weight: bold;
+			}
+		}
+		.referPeople {
+			margin-top: 20px;
+			color: #a6a6a6;
+			margin-bottom: 10px;
+
+			p {
+				text-transform: none;
+				margin-bottom: 10px;
+				&::first-letter {
+					text-transform: uppercase;
+				}
+				a {
+					color: $red;
+				}
+				.link {
+					color: $red;
+
+					margin-left: 10px;
+					font-weight: bold;
+					cursor: pointer;
+				}
+			}
+			.referralLink {
+				width: 100%;
+				border-radius: 8px;
+				border: 1px solid white;
+				padding: 5px 10px;
+				position: relative;
+				margin: 10px 0;
+				.icon {
+					position: absolute;
+					right: 8px;
+					top: 8px;
+					width: 25px;
+					height: 25px;
+					// background-color: red;
+					@include display(flex, center, center);
+					i {
+						color: white;
+					}
+					i[class*="fa-solid"] {
+						color: $red;
+					}
+				}
+				p {
+					span.note {
+						color: yellow;
+						font-size: 14px;
+						cursor: pointer;
+					}
+					span.link {
+						display: block;
+						margin-top: 3px;
+						word-break: break-all;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+		#referrals {
+			.heading {
+				width: 100%;
+				height: auto;
+				@include display(flex, space-between, center);
+				margin-top: 40px;
+				text-transform: uppercase;
+				font-weight: bold;
+				div {
+					color: yellow;
+				}
+				.name {
+					margin-right: 30px;
+				}
+				.status {
+					margin-right: 25px;
+				}
+			}
+			.content {
+				min-height: 200px;
+				padding-left: 10px;
+				.referral {
+					width: 100%;
+					height: auto;
+					@include display(flex, space-between, center);
+					margin-top: 20px;
+					.index {
+						width: 30px;
+						height: 30px;
+						@include display(flex, center, center);
+						font-weight: bold;
+						border-radius: 50%;
+						background-color: #b62ce3;
+					}
+					&:nth-child(odd) .index {
+						color: black;
+						background-color: white;
+					}
+					.name {
+						width: 70%;
+						text-align: center;
+						height: auto;
+						font-weight: bold;
+						text-transform: capitalize;
+					}
+					.status {
+						font-weight: bold;
+						background-color: $red;
+						@include display(flex, center, center);
+						width: auto;
+						padding: 0 10px;
+						// outline: 2px solid grey;
+						height: 30px;
+					}
+				}
+			}
+		}
+		.noRef {
+			color: white;
+			text-transform: uppercase;
+			font-weight: bold;
+			width: 100%;
+			margin-top: 20px;
+			line-height: 25px;
+			height: 100px;
+			text-align: center;
+			@include display(flex, center, center);
+		}
+	}
+	.dark {
+		background-color: $backgroundColor;
+	}
+}
+.dark {
+	background: #130d34;
+}
+
+@media screen and (min-width: 1025px) {
+	main {
+		@include display(flex, center, flex-start);
+		width: 100%;
+		height: 100vh;
+		max-width: 1170px;
+		margin: 0 auto;
+		.includes {
+			border-right: 2px solid white;
+			width: 35%;
+			height: 100vh;
+		}
+		#container {
+			margin-left: 30px;
+			width: 85%;
+			height: 100vh;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			padding-right: 70px;
+			position: relative;
+			bottom: 3px;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			.referPeople {
+				font-size: 14px;
+			}
+			#referrals,
+			.noRef {
+				height: auto;
+				font-size: 14px;
+				min-height: 300px;
+			}
+			.noRef {
+				-webkit-box-align: start;
+				-ms-flex-align: start;
+				align-items: flex-start;
+				padding-top: 20px;
+			}
+			#controls {
+				position: -webkit-sticky;
+				position: sticky;
+				font-size: 14px;
+				a {
+					padding-bottom: 10px;
+					div {
+						margin-top: 10px;
+						margin-bottom: 0;
+					}
+					p {
+						margin-top: 7px;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+	.phone__menu.logged {
+		.referrals {
+			color: $red;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+}

@@ -1,0 +1,734 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Heebo:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(300deg, #130d34 80%, #9d328c 90%);
+    background: linear-gradient(150deg, #130d34 80%, #9d328c 90%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(290deg, #130d34 83%, #9d328c 93%);
+    background: linear-gradient(160deg, #130d34 83%, #9d328c 93%);
+  }
+}
+
+@-webkit-keyframes slide_proposal_container_in {
+  0% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes slide_proposal_container_in {
+  0% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+  }
+  .phone__menu .dashboard {
+    color: #00af50;
+  }
+  .phone__menu .dashboard:hover {
+    color: #00af50;
+  }
+  main {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+  }
+  main h3 {
+    color: yellow;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+  main .top,
+  main .switch {
+    height: 40px;
+    padding: 0 20px;
+    margin-top: 20px;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main .top h3,
+  main .switch h3 {
+    color: white;
+  }
+  main .top .createNew,
+  main .switch .createNew {
+    border: none;
+    background-color: #00af50;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  main .vote_top {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  main .switch {
+    width: 100%;
+    padding: 40px 20% 40px 20%;
+    margin: 10px auto 0 auto;
+    background-color: #04001b;
+  }
+  main .switch .switch_elem {
+    color: white;
+    text-transform: uppercase;
+  }
+  main .switch .active {
+    -webkit-text-decoration: 6px solid yellow underline;
+    text-decoration: 6px solid yellow underline;
+    text-underline-offset: 4px;
+    color: yellow;
+  }
+  main #proposals {
+    width: 100%;
+    height: auto;
+    min-height: 700px;
+    background-color: #04001b;
+    padding: 0;
+    padding: 20px 20px;
+  }
+  main #proposals .pendingProposals {
+    width: 100%;
+  }
+  main #proposals .pendingProposals .proposal {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+  }
+  main #proposals .pendingProposals .proposal .proposal_heading {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #b62ce3;
+    padding: 0 20px;
+  }
+  main #proposals .pendingProposals .proposal .proposal_heading div {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  main #proposals .pendingProposals .proposal .proposal_heading .proposal_id {
+    color: yellow;
+  }
+  main #proposals .pendingProposals .proposal .proposal_heading .proposal_id span {
+    color: black;
+  }
+  main #proposals .pendingProposals .proposal .proposal_heading .tag {
+    color: white;
+  }
+  main #proposals .pendingProposals .proposal .proposal_heading .time {
+    color: yellow;
+  }
+  main #proposals .pendingProposals .proposal .proposal_heading .time span {
+    color: white;
+  }
+  main #proposals .pendingProposals .proposal .proposal_description {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 3px solid #a6a6a6;
+    padding: 10px 15px;
+  }
+  main #proposals .pendingProposals .proposal .proposal_description .heading {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #a6a6a6;
+    text-align: left;
+    padding: 0;
+  }
+  main #proposals .pendingProposals .proposal .proposal_description .brief {
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 20px;
+    color: #a6a6a6;
+  }
+  main #proposals .pendingProposals .proposal .proposal_description a {
+    text-transform: uppercase;
+    display: block;
+    width: 120px;
+    text-align: center;
+    text-decoration: underline;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 700;
+    color: #b62ce3;
+    text-underline-offset: 3px;
+    margin-bottom: 20px;
+  }
+  main #proposals .pendingProposals .proposal[data-mod="mod"] .proposal_heading .proposal_id span {
+    color: #00af50;
+  }
+  main #proposals .pendingProposals .noProposals {
+    margin-top: 40px;
+    text-align: center;
+  }
+  main #proposals .pendingProposals .noProposals p {
+    color: white;
+  }
+  main #proposals .pendingProposals .noProposals a {
+    margin-top: 20px;
+    display: block;
+    color: #df12ac;
+  }
+  main #proposals .moderatedProposals {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    display: none;
+    margin-top: -10px;
+  }
+  main #proposals .moderatedProposals .heading {
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    margin-top: 20px;
+  }
+  main #proposals .moderatedProposals .heading h3 {
+    text-transform: uppercase;
+    color: black;
+  }
+  main #proposals .moderatedProposals .heading h3:nth-child(1), main #proposals .moderatedProposals .heading h3:nth-child(2) {
+    width: 30%;
+    height: 100%;
+    border-right: 3px solid #020017;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #proposals .moderatedProposals .heading h3:nth-child(2) h3 {
+    text-align: center;
+  }
+  main #proposals .moderatedProposals .heading h3:nth-child(2) {
+    width: 70%;
+    border-right: none;
+  }
+  main #proposals .moderatedProposals .content {
+    height: auto;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem {
+    height: 170px;
+    color: white;
+    border: 2px solid white;
+    border-top: none;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .status {
+    width: 30%;
+    height: 100%;
+    border-right: 3px solid white;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .status .status_container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .status .status_container i {
+    font-size: 18px;
+    color: black;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .status .approved {
+    background-color: green;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .status .pending {
+    background-color: grey;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .status .active {
+    background-color: white;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .status .active i {
+    color: black;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .status .disapproved,
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .status .rejected {
+    background-color: red;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .proposal {
+    width: 70%;
+    height: auto;
+    padding: 10px;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .proposal .proposal_heading {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .proposal .proposal_desc {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  main #proposals .moderatedProposals .content .proposals_container .content_elem .proposal a {
+    color: #b62ce3;
+    text-underline-offset: 2px;
+  }
+  main #proposals .moderatedProposals .content .seeMore,
+  main #proposals .moderatedProposals .content .moreVotes {
+    background-color: white;
+    margin-right: 20px;
+    width: 140px;
+    height: 40px;
+    margin-left: auto;
+    margin-top: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #proposals .moderatedProposals .noModerated {
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+  }
+  main #aProposal {
+    width: 100%;
+    height: 100%;
+  }
+  main #aProposal .approved {
+    margin-top: 10px;
+    color: #00af50;
+  }
+  main #aProposal .rejected {
+    margin-top: 10px;
+    color: red;
+  }
+  main #aProposal .active {
+    color: white;
+    margin-top: 5px;
+  }
+  main #aProposal #proposalDetails {
+    padding: 0 20px;
+    margin-top: 30px;
+    padding-bottom: 50px;
+  }
+  main #aProposal #proposalDetails .heading {
+    text-align: left;
+    color: #b62ce3;
+    width: 100%;
+    font-size: 14px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  main #aProposal #proposalDetails p {
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+  }
+  main #aProposal #proposalDetails .details {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  main #aProposal #proposalDetails .details .estimate {
+    font-size: 14px;
+    color: yellow;
+    margin-bottom: 10px;
+  }
+  main #aProposal #proposalDetails .details .estimate span {
+    color: white;
+  }
+  main #aProposal #proposalDetails .details .tags h3,
+  main #aProposal #proposalDetails .details .time h3 {
+    color: #00af50;
+    text-align: left;
+  }
+  main #aProposal #proposalDetails .details .tags .tagsContainer,
+  main #aProposal #proposalDetails .details .time .tagsContainer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #aProposal #proposalDetails .details .tags .tagsContainer div,
+  main #aProposal #proposalDetails .details .time .tagsContainer div {
+    width: auto;
+    height: 25px;
+    color: black;
+    border-radius: 3px;
+    background-color: white;
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+  main #aProposal #proposalDetails .details .information {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  main #aProposal #proposalDetails .details .information .author {
+    width: 70%;
+    height: 40px;
+    margin-left: auto;
+    display: flex;
+    -webkit-box-pack: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #aProposal #proposalDetails .details .information .author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  main #aProposal #proposalDetails .details .information .author p {
+    color: #df12ac;
+    font-weight: bold;
+  }
+  main #aProposal #proposalDetails .details .information .date {
+    text-align: right;
+  }
+  main #aProposal #proposalDetails .details .voteResults {
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #aProposal #proposalDetails .details .voteResults h3 span {
+    color: white;
+  }
+  main #aProposal #proposalDetails .details .alreadyVoted {
+    width: 70%;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #00af50;
+    padding: 0 10px;
+    border-radius: 5px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #aProposal #voteControls {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  main #aProposal #voteControls button {
+    width: 30%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  main #aProposal #voteControls button:nth-child(1) {
+    background-color: #00af50;
+  }
+  main #aProposal #voteControls button:nth-child(2) {
+    background-color: red;
+    color: white;
+  }
+  main #aProposal .editProposal {
+    width: 150px;
+    height: 40px;
+    background-color: #00af50;
+    border-radius: 3px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  main #aProposal .editProposal a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  main #invalidVote {
+    width: 100%;
+    height: 400px;
+  }
+  main #invalidVote p {
+    color: white;
+    text-align: center;
+  }
+  main #invalidVote p span {
+    color: yellow;
+  }
+  main .error,
+  main .moderated {
+    color: white;
+    padding: 0 20px;
+    text-align: center;
+    margin-top: 30px;
+    line-height: 30px;
+  }
+  main .error span,
+  main .moderated span {
+    color: yellow;
+    font-style: italic;
+  }
+  main #newProposal,
+  main #editProposal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #130d34;
+    padding: 20px;
+  }
+  main #newProposal h3,
+  main #editProposal h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+  }
+  main #newProposal label,
+  main #newProposal textarea,
+  main #editProposal label,
+  main #editProposal textarea {
+    display: block;
+  }
+  main #newProposal label,
+  main #editProposal label {
+    margin-bottom: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  main #newProposal label span,
+  main #editProposal label span {
+    color: #00af50;
+  }
+  main #newProposal textarea,
+  main #editProposal textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  main #newProposal textarea:hover,
+  main #editProposal textarea:hover {
+    outline: none;
+  }
+  main #newProposal #message,
+  main #editProposal #message {
+    min-height: 300px;
+    max-height: 300px;
+  }
+  main #newProposal #estimate,
+  main #newProposal #tags,
+  main #editProposal #estimate,
+  main #editProposal #tags {
+    max-height: 40px;
+    min-height: 40px;
+  }
+  main #newProposal .err,
+  main #editProposal .err {
+    color: #df12ac;
+    font-weight: bold;
+    text-align: left;
+    margin-top: -13px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    display: none;
+    text-align: center;
+  }
+  main #newProposal .controls,
+  main #editProposal .controls {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #newProposal .controls button,
+  main #editProposal .controls button {
+    width: 30%;
+    height: auto;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 3px;
+  }
+  main #newProposal .controls .submit,
+  main #editProposal .controls .submit {
+    background-color: #00af50;
+  }
+  main #newProposal .controls button,
+  main #editProposal .controls button {
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main #proposals .pendingProposals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+  }
+  main #proposals .pendingProposals .proposal {
+    width: 100%;
+    height: 300px;
+  }
+  main #proposals .pendingProposals .proposal .proposal_description {
+    height: 230px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  main {
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+  main .includes {
+    width: 25%;
+    height: 100vh;
+    border-right: 2px solid white;
+  }
+  main #container {
+    padding-top: 20px;
+    width: 65%;
+    overflow-y: scroll;
+    height: 100vh;
+    margin-left: 30px;
+  }
+  main #container .vote_top {
+    margin-top: 0;
+  }
+  main #container::-webkit-scrollbar {
+    display: none;
+  }
+  main #container #proposals,
+  main #container .switch {
+    background: transparent;
+  }
+  main #container #aProposal .editProposal,
+  main #container .switch .editProposal {
+    margin-left: 0;
+  }
+}

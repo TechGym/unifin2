@@ -1,0 +1,137 @@
+@import "../../sass/includes/default";
+@media screen and (min-width: 0px) {
+	body {
+		width: 100%;
+		height: auto;
+		@include display(flex, center, center);
+	}
+
+	* {
+		font-family: "Merriweather", sans-serif;
+		font-weight: bold;
+	}
+	.container {
+		width: 90%;
+		height: auto;
+		border-radius: 5px;
+		#logo {
+			width: 90px;
+			height: 90px;
+			margin: 20px auto;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.intro {
+			width: 100%;
+			padding-bottom: 20px;
+			height: 15%;
+			border-bottom: 2px solid $red;
+			@include display(flex, center, center);
+			h1 {
+				font-size: 34px;
+				width: 100%;
+				height: 100%;
+				color: white;
+				text-align: center;
+				font-family: "Inter", sans-serif;
+				@include display(flex, center, center);
+				// text-shadow:4px 5px 3px #df12ac;
+			}
+		}
+		#success {
+			margin-top: 20px;
+			width: 100%;
+			height: 50px;
+			background-color: green;
+			color: white;
+			@include display(flex, center, center);
+			display: none;
+		}
+		form {
+			width: 100%;
+			height: 95%;
+			padding: 50px 20px;
+			background-color: transparent;
+			.form_element {
+				width: 100%;
+				height: 50px;
+				border-radius: 5px;
+				@include display(flex, flex-start, center);
+				padding: 0 10px;
+				background-color: white;
+				margin-bottom: 20px;
+				position: relative;
+
+				input {
+					width: 90%;
+					height: 70%;
+					border: none;
+					margin-left: 10px;
+					font-size: 16px;
+					&:focus {
+						outline: none;
+					}
+				}
+			}
+
+			.controls {
+				width: 100%;
+				height: auto;
+				.proceed,
+				.exit {
+					background-color: $red;
+					display: block;
+					border: none;
+					border-radius: 10px;
+					width: 280px;
+					margin: 30px auto;
+					height: 50px;
+					font-size: 20px;
+					font-weight: bold;
+					color: white;
+				}
+				.exit {
+					background-color: transparent;
+					border: 1px solid grey;
+				}
+			}
+
+			.err {
+				color: #e91919cb;
+				font-size: 14px;
+				margin-top: -10px;
+				margin-bottom: 20px;
+				display: none;
+			}
+		}
+		.readMore {
+			color: white;
+			a {
+				color: $red;
+			}
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	.container {
+		width: 60%;
+	}
+}
+@media screen and (min-width: 1025px) {
+	.container {
+		width: 800px;
+		form {
+			.submit {
+				&:hover {
+					background-color: $yellow;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+.dark {
+	background: rgb(19, 13, 52);
+}

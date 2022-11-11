@@ -1,0 +1,140 @@
+@import "./includes/default";
+@media screen and (min-width: 0px) {
+  .container {
+    width: 390px;
+    padding: 10px;
+    height: auto;
+    // background-color: red;
+    .logo {
+      width: 100%;
+      height: 50px;
+      @include display(flex, center, center);
+      img {
+        height: 100%;
+        width: 60px;
+      }
+      h1 {
+        color: white;
+        text-shadow: 4px 5px 3px #df12ac;
+        margin-left: 5px;
+      }
+    }
+    button {
+      width: 100%;
+      height: 40px;
+      border: none;
+      margin-top: 15px;
+      font-weight: bold;
+      border-radius: 3px;
+      font-size: 16px;
+      font-family: "Merriweather", sans-serif;
+    }
+    .email,
+    .error,
+    .verifyDetails {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      color: white;
+      font-family: "Cabin", sans-serif;
+      border: 2px solid white;
+      border-radius: 4px;
+      padding: 10px 20px;
+      text-align: center;
+      h3 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .contact {
+        font-weight: bold;
+        margin: 5px 0;
+        color: $red;
+      }
+      .note {
+        margin-top: 10px;
+        span {
+          color: $red;
+        }
+      }
+      #verify {
+        @include display(flex, center, center);
+        input {
+          display: block;
+          width: 60%;
+          height: 40px;
+          border: none;
+          margin: 0 auto;
+          margin-top: 20px;
+          padding: 0 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          font-weight: bold;
+          &:focus {
+            outline: none;
+          }
+        }
+        input[type="submit"] {
+          width: 30%;
+          background-color: $red;
+          &:hover {
+            background-color: $yellow;
+          }
+        }
+      }
+      .msgError {
+        color: #df12ac;
+        text-align: left;
+        margin-top: 10px;
+        font-weight: bold;
+        display: none;
+      }
+
+      .resend {
+        background-color: $red;
+        margin-top: 40px;
+      }
+    }
+    .error {
+      border: none;
+      p {
+        text-align: center;
+        line-height: 25px;
+      }
+      a {
+        color: $mapStrokes;
+        text-decoration: underline;
+      }
+    }
+    .verify {
+      height: 220px;
+      background-color: red;
+    }
+    .displayResend {
+      color: white;
+      margin-top: 10px;
+      background-color: transparent;
+      text-align: left;
+      text-decoration: underline;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .verify_action {
+      display: none;
+    }
+
+    .successful {
+      margin-top: 10px;
+      h3,
+      p {
+        color: white;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.dark {
+  background: #130d34;
+  @include display(flex, center, center);
+}

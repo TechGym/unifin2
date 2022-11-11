@@ -1,0 +1,90 @@
+@import "./includes/default";
+@media screen and(min-width:0px) {
+  .dark {
+    background: #130d34;
+  }
+  .phone__menu {
+    .faq {
+      color: $red;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  main {
+    padding: 0 20px;
+    .title {
+      color: white;
+      text-transform: capitalize;
+      text-align: center;
+    }
+    .askedQuestion {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      .question {
+        width: 100%;
+        height: auto;
+        color: $red;
+        font-weight: bold;
+        @include display(flex, flex-start, flex-start);
+        .list {
+          -ms-flex-item-align: center;
+          align-self: center;
+          width: 10px;
+          height: 8px;
+          border-radius: 50%;
+          margin-right: 10px;
+          background: $yellow;
+        }
+      }
+      .answer {
+        font-size: 14px;
+        color: white;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+@media screen and(min-width:768px) {
+  main {
+    padding: 0 20px;
+    width: 100%;
+    margin: 0 auto;
+    // margin-top: 100px;
+    .title {
+      font-size: 20px;
+    }
+    .questions {
+      display: grid;
+      gap: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      .askedQuestion {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+@media screen and(min-width:1025px) {
+  .header_container {
+    header {
+      nav {
+        .faq {
+          color: $red;
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    margin-top: 100px;
+    max-width: 1170px;
+  }
+}

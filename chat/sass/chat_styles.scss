@@ -1,0 +1,540 @@
+@import "../../sass/includes/default";
+@media screen and (min-width: 0px) {
+	.dark {
+		background: rgb(19, 13, 52);
+		position: relative;
+		font-family: "Cabin", sans-serif;
+	}
+	.header_container {
+		position: fixed;
+		height: 90px;
+		top: 0;
+		left: 0;
+		background-color: $backgroundColor;
+		z-index: 5;
+	}
+
+	.phone__menu {
+		nav {
+			ul {
+				.chat {
+					color: $red;
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+	main {
+		width: 100%;
+		height: auto;
+		padding-top: 70px;
+
+		#container {
+			width: 100%;
+			height: 93vh;
+			padding: 40px 20px 70px 20px;
+			overflow-y: scroll;
+			.start {
+				width: 55%;
+				height: 30px;
+				background: $red;
+				margin: 0 auto;
+				@include display(flex, center, center);
+				font-weight: bold;
+				color: white;
+				border-radius: 5px;
+				margin-bottom: 20px;
+				z-index: 3;
+			}
+			#chatArea {
+				.messageArea {
+					.chatItem {
+						width: 90%;
+						min-height: 50px;
+						border-radius: 5px;
+						background-color: white;
+						padding: 5px 10px 3px 10px;
+						margin-bottom: 20px;
+						.author {
+							color: $yellow;
+							height: auto;
+							font-size: 13px;
+							// background-color: red;
+							@include display(flex, flex-start, center);
+							.country,
+							.moderator {
+								width: 20px;
+								height: 20px;
+								margin-left: 10px;
+							}
+							.country {
+								img {
+									width: 100%;
+									height: 100%;
+								}
+							}
+							.user,
+							.moderator,
+							.country {
+								cursor: pointer;
+							}
+							.moderator {
+								background-color: yellow;
+							}
+						}
+						.message {
+							font-size: 14px;
+							margin-top: 5px;
+							height: auto;
+							word-break: break-all;
+						}
+						.timestamp {
+							height: 30px;
+							width: 25%;
+							margin-left: auto;
+							@include display(flex, flex-end, center);
+							margin-top: 3px;
+							font-size: 12px;
+							font-weight: bold;
+							opacity: 0.6;
+						}
+						.comments {
+							width: 100%;
+							height: 30px;
+							@include display(flex, space-between, center);
+							padding: 0 20px;
+							margin-bottom: 10px;
+							border-top: 2px solid $red;
+							// background-color: green;
+							.comment {
+								width: 70%;
+								height: auto;
+								font-family: bold;
+
+								@include display(flex, flex-start, center);
+								p {
+									margin-left: 10px;
+									font-weight: bold;
+									font-size: 14px;
+								}
+							}
+							.arrow {
+								width: 20px;
+								height: 20px;
+								cursor: pointer;
+							}
+						}
+					}
+					.sent {
+						margin-left: auto;
+					}
+					.received {
+						margin-right: auto;
+					}
+				}
+			}
+		}
+	}
+	.formSection,
+	.replyMessage {
+		.chatControls {
+			width: 100%;
+			height: auto;
+			min-height: 70px;
+			padding: 10px 20px;
+			background-color: $backgroundColor;
+			z-index: 3;
+			position: fixed;
+			@include display(flex, space-between, center);
+			bottom: 0;
+			left: 0;
+			textarea {
+				width: 85%;
+				height: 36px;
+				resize: none;
+				padding: 10px;
+				border: none;
+				border-radius: 5px;
+				&:focus {
+					outline: none;
+				}
+			}
+			.send,
+			.sendReply {
+				width: 35px;
+				height: 35px;
+				border-radius: 50%;
+				background-color: white;
+				border: none;
+				@include display(flex, center, center);
+				i {
+					color: $red;
+					font-size: 18px;
+					display: block;
+					margin-left: -3px;
+				}
+			}
+		}
+	}
+	aside#message {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: #04001b;
+		overflow-y: scroll;
+		z-index: 7;
+		padding: 20px;
+		padding-top: 80px;
+		display: none;
+		.top {
+			width: 100%;
+			height: auto;
+			background-color: #04001b;
+			@include display(flex, flex-end, center);
+			position: fixed;
+			top: 3vh;
+			left: 0;
+			padding: 0 20px;
+			.close {
+				width: 30px;
+				display: block;
+				margin-left: auto;
+				height: 30px;
+				border: none;
+				border-radius: 5px;
+				background-color: $red;
+				color: white;
+			}
+		}
+
+		.baseMessage,
+		.comments .chatItem {
+			width: 90%;
+			min-height: 50px;
+			border-radius: 5px;
+			background-color: white;
+			padding: 5px 10px 3px 10px;
+			margin-bottom: 20px;
+
+			.author {
+				color: $yellow;
+				height: auto;
+				font-size: 13px;
+				// background-color: red;
+				@include display(flex, flex-start, center);
+				.country,
+				.moderator {
+					width: 20px;
+					height: 20px;
+					margin-left: 10px;
+				}
+				.country {
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.moderator {
+					background-color: yellow;
+				}
+			}
+			.message {
+				font-size: 14px;
+				margin-top: 5px;
+				height: auto;
+				word-break: break-all;
+			}
+			.timestamp {
+				height: 30px;
+				width: 25%;
+				margin-left: auto;
+				@include display(flex, flex-end, center);
+				margin-top: 3px;
+				font-size: 12px;
+				font-weight: bold;
+				opacity: 0.6;
+			}
+			.comments {
+				width: 100%;
+				height: 30px;
+				@include display(flex, space-between, center);
+				padding: 0 20px;
+				margin-bottom: 10px;
+				border-top: 2px solid $red;
+				// background-color: green;
+				.comment {
+					width: 70%;
+					height: auto;
+					font-family: bold;
+
+					@include display(flex, flex-start, center);
+					p {
+						margin-left: 10px;
+						font-weight: bold;
+						font-size: 14px;
+					}
+				}
+				.arrow {
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+		.baseMessage {
+			width: 100%;
+			min-height: 120px;
+			padding: 30px 20px;
+		}
+		.comments {
+			border-top: 2px solid $red;
+			padding-top: 10px;
+			height: auto;
+			width: 100%;
+			margin-bottom: 50px;
+			overflow-y: scroll;
+			h3 {
+				margin-bottom: 10px;
+				text-transform: capitalize;
+				text-align: center;
+				color: white;
+			}
+		}
+		.noComments {
+			p {
+				color: white;
+			}
+		}
+		.replyMessage {
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	aside#tip {
+		width: 100%;
+		height: 100vh;
+		z-index: 7;
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include display(flex, center, center);
+		background-color: $backgroundColor;
+		display: none;
+		.container {
+			background-color: white;
+			width: 100%;
+			height: 250px;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 0 auto;
+		}
+
+		label,
+		input {
+			display: block;
+			margin: 10px 0;
+		}
+		label {
+			opacity: 0.5;
+		}
+		input {
+			width: 100%;
+			height: 40px;
+			border-radius: 5px;
+			padding: 0 10px;
+			&:focus {
+				outline: none;
+			}
+		}
+		p.displayNotice {
+			color: red;
+			margin-bottom: 5px;
+			font-weight: bold;
+			font-size: 14px;
+			display: none;
+		}
+		.control {
+			width: 100%;
+			height: 40px;
+			@include display(flex, center, center);
+			margin-top: 20px;
+			input,
+			button {
+				width: 45%;
+				height: 100%;
+				border: none;
+				background-color: $yellow;
+				border-radius: 10px;
+				color: white;
+				font-weight: bold;
+				font-size: 14px;
+			}
+			input {
+				margin-right: 20px;
+				background-color: $red;
+			}
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	main {
+		#container {
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+	aside#tip {
+		width: 100%;
+		.container {
+			width: 500px;
+			height: 250px;
+		}
+	}
+}
+@media screen and (min-width: 1025px) {
+	main {
+		@include display(flex, center, flex-start);
+		padding: 0;
+		height: 100vh;
+		width: 100%;
+		max-width: 1170px;
+		margin: 0 auto;
+		position: relative;
+		.includes {
+			width: 25%;
+			height: 100vh;
+			position: relative;
+			border-right: 2px solid white;
+		}
+		.phone__menu {
+			nav {
+				ul {
+					.chat {
+						color: $red;
+						&:hover {
+							color: $red;
+						}
+					}
+				}
+			}
+		}
+		#container {
+			margin-right: 30px;
+			height: 100vh;
+			width: 80%;
+			padding-top: 10px;
+			#chatArea {
+				.start {
+					width: 40%;
+					font-size: 14px;
+				}
+				.messageArea {
+					.chatItem {
+						min-height: 35px;
+						width: 60%;
+						padding: 10px 10px 0 10px;
+						.author {
+							.user {
+								font-size: 10px;
+							}
+							.country,
+							.moderator {
+								height: 15px;
+								width: 15px;
+							}
+						}
+						.message {
+							font-size: 12px;
+							margin-bottom: 3px;
+						}
+						.timestamp {
+							font-size: 10px;
+							height: auto;
+							padding-bottom: 5px;
+						}
+						.comments {
+							height: auto;
+							i {
+								font-size: 12px;
+							}
+							.comment {
+								p {
+									font-size: 10px;
+								}
+							}
+							span {
+								font-size: 10px;
+							}
+						}
+					}
+				}
+			}
+			.formSection {
+				.chatControls {
+					width: 68%;
+					left: 25%;
+				}
+			}
+		}
+	}
+	aside#message {
+		.top {
+			width: 95%;
+			background-color: transparent;
+			position: absolute;
+			left: auto;
+		}
+		.content {
+			width: 50%;
+			margin: 0 auto;
+			.baseMessage,
+			.comments .chatItem {
+				padding: 10px;
+				min-height: 20px;
+				.author {
+					font-size: 12px;
+				}
+				.moderator,
+				.country {
+					height: 15px;
+					width: 15px;
+				}
+
+				.timestamp {
+					font-size: 10px;
+					height: auto;
+				}
+				.message {
+					font-size: 12px;
+				}
+			}
+			.noComments {
+				font-size: 12px;
+			}
+			.comments {
+				height: auto;
+				overflow: auto;
+			}
+		}
+	}
+	.replyMessage {
+		.chatControls {
+			width: 50%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+	}
+	aside#tip {
+		width: 100%;
+		.container {
+			width: 500px;
+			height: 220px;
+		}
+	}
+}

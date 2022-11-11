@@ -1,0 +1,166 @@
+@import "./includes/default";
+@media screen and (min-width: 0px) {
+	.phone__menu {
+		.campaign {
+			color: $red;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	main {
+		padding-bottom: 100px;
+		h3 {
+			text-transform: uppercase;
+			color: white;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.info {
+			padding: 0 10px;
+			margin-top: 20px;
+			width: 100%;
+			height: auto;
+			display: grid;
+			grid-template-columns: 1fr;
+			.info__item {
+				margin-bottom: 3px;
+				p {
+					color: $red;
+					font-weight: bold;
+					span {
+						color: white;
+					}
+				}
+			}
+		}
+		.currentSprint {
+			margin-top: 20px;
+			@include display(flex, space-between, center);
+			width: 100%;
+			height: 40px;
+			border-block: 2px solid blue;
+			padding: 0 20px;
+
+			p {
+				color: $red;
+				font-weight: normal;
+				span {
+					color: yellow;
+				}
+			}
+		}
+		.sprints {
+			padding-top: 40px;
+			.total {
+				text-align: center;
+			}
+			p {
+				color: $red;
+				font-weight: bold;
+				span {
+					color: white;
+					font-weight: normal;
+				}
+			}
+			.info {
+				height: auto;
+				margin-bottom: 20px;
+				display: block;
+				p {
+					margin-bottom: 10px;
+				}
+			}
+			.image {
+				width: 95%;
+				overflow-x: scroll;
+				scrollbar-width: none;
+				overflow-y: hidden;
+				height: 400px;
+				margin-top: 20px;
+				margin: 0 auto;
+				border-radius: 5px;
+				img {
+					width: 200%;
+					height: 100%;
+				}
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+		}
+		.description {
+			margin-top: 20px;
+			padding: 0 20px;
+			p {
+				color: #a6a6a6;
+				line-height: 25px;
+				margin-bottom: 20px;
+				a {
+					color: $red;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+.dark {
+	background: #130d34;
+}
+@media screen and (min-width: 768px) {
+	main {
+		.info {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+@media screen and (min-width: 1025px) {
+	main {
+		width: 100%;
+		height: 100vh;
+		max-width: 1170px;
+		margin: 0 auto;
+		@include display(flex, center, flex-start);
+		overflow-y: hidden;
+		.includes {
+			width: 25%;
+			height: 100vh;
+			border-right: 2px solid white;
+			.phone__menu.logged {
+				.campaign {
+					color: $red;
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+		#container {
+			margin-left: 30px;
+			padding-top: 20px;
+			width: 65%;
+			height: 100vh;
+			padding-bottom: 30px;
+			overflow-y: scroll;
+
+			.sprints {
+				.info {
+					@include display(flex, space-between, center);
+				}
+				.image {
+					height: 400px;
+					img {
+						width: 100%;
+					}
+				}
+			}
+			h3 {
+				color: pink;
+			}
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+}

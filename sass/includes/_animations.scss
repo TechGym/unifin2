@@ -1,0 +1,306 @@
+@-webkit-keyframes hero_img_slide {
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 25%;
+	}
+}
+@keyframes hero_img_slide {
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 25%;
+	}
+}
+@-webkit-keyframes hero_img_slideLg {
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 0;
+	}
+}
+@keyframes hero_img_slideLg {
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 3%;
+	}
+}
+@-webkit-keyframes heroUpDownsm {
+	0% {
+		top: 50px;
+	}
+	100% {
+		top: 40px;
+	}
+}
+@keyframes heroUpDownsm {
+	0% {
+		top: 50px;
+	}
+	100% {
+		top: 40px;
+	}
+}
+@-webkit-keyframes heroUpDownlg {
+	0% {
+		top: 20px;
+	}
+	100% {
+		top: 10px;
+	}
+}
+@keyframes heroUpDownlg {
+	0% {
+		top: 20px;
+	}
+	100% {
+		top: 10px;
+	}
+}
+@-webkit-keyframes slide_from_left {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+@keyframes slide_from_left {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+@-webkit-keyframes slide_from_leftLg {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: 0px;
+	}
+}
+@keyframes slide_from_leftLg {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: 0px;
+	}
+}
+@-webkit-keyframes slide_info_left {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: 20px;
+	}
+}
+@keyframes slide_info_left {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: 20px;
+	}
+}
+@-webkit-keyframes slide_services_left {
+	0% {
+		margin-left: -200%;
+	}
+	100% {
+		margin-left: 20px;
+	}
+}
+@keyframes slide_services_left {
+	0% {
+		margin-left: -200%;
+	}
+	100% {
+		margin-left: 20px;
+	}
+}
+@-webkit-keyframes slide_from_right {
+	0% {
+		margin-left: 400%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+@keyframes slide_from_right {
+	0% {
+		margin-left: 400%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+@-webkit-keyframes slide_ico_right {
+	0% {
+		margin-left: 400%;
+	}
+	100% {
+		margin-left: 20px;
+	}
+}
+@keyframes slide_ico_right {
+	0% {
+		margin-left: 400%;
+	}
+	100% {
+		margin-left: 20px;
+	}
+}
+@-webkit-keyframes slide_ico_rightLg {
+	0% {
+		margin-left: 400%;
+	}
+	100% {
+		margin-left: 20px;
+	}
+}
+@keyframes slide_ico_rightLg {
+	0% {
+		margin-left: 400%;
+	}
+	100% {
+		margin-left: 0px;
+	}
+}
+@-webkit-keyframes gridUp {
+	from {
+		margin-top: 400px;
+	}
+	to {
+		margin-top: 30px;
+	}
+}
+@keyframes gridUp {
+	from {
+		margin-top: 400px;
+	}
+	to {
+		margin-top: 30px;
+	}
+}
+@-webkit-keyframes gridElementsUp {
+	from {
+		margin-top: 400px;
+	}
+	to {
+		margin-top: 0px;
+	}
+}
+@keyframes gridElementsUp {
+	from {
+		margin-top: 400px;
+	}
+	to {
+		margin-top: 0px;
+	}
+}
+@-webkit-keyframes services_desc_slide {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: auto;
+	}
+}
+@keyframes services_desc_slide {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: auto;
+	}
+}
+@-webkit-keyframes slide_card_left {
+	0% {
+		margin-left: -200%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+@keyframes slide_card_left {
+	0% {
+		margin-left: -200%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+@-webkit-keyframes statUp {
+	0% {
+		margin-top: 400px;
+	}
+	100% {
+		margin-top: 70px;
+	}
+}
+@keyframes statUp {
+	0% {
+		margin-top: 400px;
+	}
+	100% {
+		margin-top: 70px;
+	}
+}
+@-webkit-keyframes network {
+	0% {
+		margin-top: 400px;
+		margin-left: 400%;
+	}
+	100% {
+		margin-top: 50px;
+		margin-left: auto;
+	}
+}
+@keyframes network {
+	0% {
+		margin-top: 400px;
+		margin-left: 400%;
+	}
+	100% {
+		margin-top: 50px;
+		margin-left: auto;
+	}
+}
+@-webkit-keyframes animate {
+	0% {
+		-webkit-transform: translateY(0) rotate(0deg);
+		transform: translateY(0) rotate(0deg);
+		opacity: 0.6;
+		border-radius: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(-1000px) rotate(720deg);
+		transform: translateY(-1000px) rotate(720deg);
+		opacity: 0;
+		border-radius: 50%;
+	}
+}
+@keyframes animate {
+	0% {
+		-webkit-transform: translateY(0) rotate(0deg);
+		transform: translateY(0) rotate(0deg);
+		opacity: 0.6;
+		border-radius: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(-1000px) rotate(720deg);
+		transform: translateY(-1000px) rotate(720deg);
+		opacity: 0;
+		border-radius: 50%;
+	}
+}

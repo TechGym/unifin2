@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Heebo:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(300deg, #130d34 80%, #9d328c 90%);
+    background: linear-gradient(150deg, #130d34 80%, #9d328c 90%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(290deg, #130d34 83%, #9d328c 93%);
+    background: linear-gradient(160deg, #130d34 83%, #9d328c 93%);
+  }
+}
+
+@media screen and (min-width: 0) {
+  .dark {
+    background: #101627;
+  }
+  .phone__menu .swap {
+    color: #00af50;
+  }
+  .phone__menu .swap:hover {
+    color: #00af50;
+  }
+  header {
+    background-color: #130d34;
+    margin-bottom: 50px;
+  }
+  main {
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+  }
+  main iframe {
+    max-width: 370px;
+    height: 60%;
+    padding: 0 20px;
+    overflow: hidden;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    margin-top: 90px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    overflow: hidden;
+  }
+  .header_container header nav .swap {
+    color: #00af50;
+  }
+  .header_container header nav .swap:hover {
+    color: #00af50;
+  }
+  main {
+    max-width: 1170px;
+    height: 600px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+  main .includes {
+    width: 25%;
+    height: 100vh;
+    border-right: 2px solid white;
+    padding-top: 20px;
+  }
+  main .includes .header_container {
+    background-color: transparent;
+  }
+  main .includes .header_container header {
+    background-color: transparent;
+  }
+  main .includes .phone__menu nav ul a.swap {
+    color: #00af50;
+  }
+  main #container {
+    width: 65%;
+    height: 100vh;
+    margin-left: 30px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #container iframe {
+    margin-left: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}

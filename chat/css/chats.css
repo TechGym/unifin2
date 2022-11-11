@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Heebo:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(300deg, #130d34 80%, #9d328c 90%);
+    background: linear-gradient(150deg, #130d34 80%, #9d328c 90%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(290deg, #130d34 83%, #9d328c 93%);
+    background: linear-gradient(160deg, #130d34 83%, #9d328c 93%);
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    overflow-y: hidden;
+    position: relative;
+    font-family: "Cabin", sans-serif;
+  }
+  .phone__menu nav ul .chat {
+    color: #00af50;
+  }
+  .phone__menu nav ul .chat:hover {
+    color: #00af50;
+  }
+  main {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    position: relative;
+    background-color: #04001b;
+    overflow-y: scroll;
+    padding-bottom: 70px;
+  }
+  main .includes {
+    height: 90px;
+  }
+  main .includes .header_container {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  main #container {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+  }
+  main #container #chatArea .messageArea .chatItem {
+    width: 90%;
+    min-height: 50px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px 10px 3px 10px;
+    margin-bottom: 20px;
+  }
+  main #container #chatArea .messageArea .chatItem .author {
+    color: #fb0001;
+    height: auto;
+    font-size: 13px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #container #chatArea .messageArea .chatItem .author .country,
+  main #container #chatArea .messageArea .chatItem .author .moderator {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  main #container #chatArea .messageArea .chatItem .author .country img {
+    width: 100%;
+    height: 100%;
+  }
+  main #container #chatArea .messageArea .chatItem .author .moderator {
+    background-color: yellow;
+  }
+  main #container #chatArea .messageArea .chatItem .message {
+    font-size: 14px;
+    margin-top: 5px;
+    height: auto;
+    word-break: break-all;
+  }
+  main #container #chatArea .messageArea .chatItem .timestamp {
+    height: 30px;
+    width: 25%;
+    margin-left: auto;
+    display: flex;
+    -webkit-box-pack: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.6;
+  }
+  main #container #chatArea .messageArea .chatItem .comments {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    border-top: 2px solid #00af50;
+  }
+  main #container #chatArea .messageArea .chatItem .comments .comment {
+    width: 70%;
+    height: auto;
+    font-family: bold;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main #container #chatArea .messageArea .chatItem .comments .comment p {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  main #container #chatArea .messageArea .chatItem .comments .arrow {
+    width: 20px;
+    height: 20px;
+  }
+  main #container #chatArea .messageArea .sent {
+    margin-left: auto;
+  }
+  main #container #chatArea .messageArea .received {
+    margin-right: auto;
+  }
+  main .scrollToButtom {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+  }
+  main .start {
+    width: 80%;
+    height: 30px;
+    background: #00af50;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    z-index: 3;
+  }
+  .formSection .chatControls,
+  .replyMessage .chatControls {
+    width: 100%;
+    height: auto;
+    min-height: 70px;
+    padding: 10px 20px;
+    background-color: #130d34;
+    z-index: 3;
+    position: fixed;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+    bottom: -3px;
+    left: 0;
+  }
+  .formSection .chatControls textarea,
+  .replyMessage .chatControls textarea {
+    width: 85%;
+    height: 36px;
+    resize: none;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  .formSection .chatControls textarea:focus,
+  .replyMessage .chatControls textarea:focus {
+    outline: none;
+  }
+  .formSection .chatControls .send,
+  .formSection .chatControls .sendReply,
+  .replyMessage .chatControls .send,
+  .replyMessage .chatControls .sendReply {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .formSection .chatControls .send i,
+  .formSection .chatControls .sendReply i,
+  .replyMessage .chatControls .send i,
+  .replyMessage .chatControls .sendReply i {
+    color: #00af50;
+    font-size: 18px;
+    display: block;
+    margin-left: -3px;
+  }
+  aside#message {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #04001b;
+    overflow-y: scroll;
+    z-index: 4;
+    padding: 20px;
+    padding-top: 80px;
+    display: none;
+  }
+  aside#message .top {
+    width: 100%;
+    height: auto;
+    background-color: #04001b;
+    display: flex;
+    -webkit-box-pack: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    top: 3vh;
+    left: 0;
+    padding: 0 20px;
+  }
+  aside#message .top .close {
+    width: 30px;
+    display: block;
+    margin-left: auto;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00af50;
+    color: white;
+  }
+  aside#message .baseMessage,
+  aside#message .comments .chatItem {
+    width: 90%;
+    min-height: 50px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px 10px 3px 10px;
+    margin-bottom: 20px;
+  }
+  aside#message .baseMessage .author,
+  aside#message .comments .chatItem .author {
+    color: #fb0001;
+    height: auto;
+    font-size: 13px;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  aside#message .baseMessage .author .country,
+  aside#message .baseMessage .author .moderator,
+  aside#message .comments .chatItem .author .country,
+  aside#message .comments .chatItem .author .moderator {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  aside#message .baseMessage .author .country img,
+  aside#message .comments .chatItem .author .country img {
+    width: 100%;
+    height: 100%;
+  }
+  aside#message .baseMessage .author .moderator,
+  aside#message .comments .chatItem .author .moderator {
+    background-color: yellow;
+  }
+  aside#message .baseMessage .message,
+  aside#message .comments .chatItem .message {
+    font-size: 14px;
+    margin-top: 5px;
+    height: auto;
+    word-break: break-all;
+  }
+  aside#message .baseMessage .timestamp,
+  aside#message .comments .chatItem .timestamp {
+    height: 30px;
+    width: 25%;
+    margin-left: auto;
+    display: flex;
+    -webkit-box-pack: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.6;
+  }
+  aside#message .baseMessage .comments,
+  aside#message .comments .chatItem .comments {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    border-top: 2px solid #00af50;
+  }
+  aside#message .baseMessage .comments .comment,
+  aside#message .comments .chatItem .comments .comment {
+    width: 70%;
+    height: auto;
+    font-family: bold;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  aside#message .baseMessage .comments .comment p,
+  aside#message .comments .chatItem .comments .comment p {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  aside#message .baseMessage .comments .arrow,
+  aside#message .comments .chatItem .comments .arrow {
+    width: 20px;
+    height: 20px;
+  }
+  aside#message .baseMessage {
+    width: 100%;
+    min-height: 120px;
+    padding: 30px 20px;
+  }
+  aside#message .comments {
+    border-top: 2px solid #00af50;
+    padding-top: 10px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 50px;
+    overflow-y: scroll;
+  }
+  aside#message .comments h3 {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+  }
+  aside#message .noComments p {
+    color: white;
+  }
+  aside#message .replyMessage {
+    width: 100%;
+    background-color: yellow;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  aside#tip {
+    width: 90%;
+    height: 230px;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    margin: auto;
+    z-index: 4;
+    display: none;
+  }
+  aside#tip label,
+  aside#tip input {
+    display: block;
+    margin: 10px 0;
+  }
+  aside#tip label {
+    opacity: 0.5;
+  }
+  aside#tip input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 10px;
+  }
+  aside#tip input:focus {
+    outline: none;
+  }
+  aside#tip p.displayNotice {
+    color: red;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    display: none;
+  }
+  aside#tip .control {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  aside#tip .control input,
+  aside#tip .control button {
+    width: 45%;
+    height: 100%;
+    border: none;
+    background-color: #fb0001;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  aside#tip .control input {
+    margin-right: 20px;
+    background-color: #00af50;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    position: relative;
+    width: 70%;
+    max-width: 780px;
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  main {
+    position: relative;
+    width: 100%;
+    background-color: green;
+    max-width: 1080px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    top: 90px;
+    background-color: green;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  main .includes {
+    width: 25%;
+    height: 100vh;
+  }
+  .formSection .chatControls,
+  .replyMessage .chatControls {
+    width: 60%;
+    max-width: 780px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}

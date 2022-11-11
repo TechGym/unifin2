@@ -1,0 +1,178 @@
+@import "./includes/default";
+@media screen and (min-width: 0) {
+	.dark {
+		background: rgb(19, 13, 52);
+	}
+	body {
+		overflow-y: hidden;
+	}
+	main {
+		width: 100%;
+		height: 900px;
+		padding: 20px;
+		position: relative;
+		#select_payment {
+			width: 100%;
+			height: 100%;
+			h3 {
+				text-transform: uppercase;
+				text-align: left;
+				color: #df12ac;
+				margin-bottom: 20px;
+			}
+			form {
+				width: 100%;
+				height: auto;
+				.option {
+					height: 40px;
+					width: 100%;
+					margin-bottom: 20px;
+					@include display(flex, flex-start, center);
+					label {
+						color: white;
+						margin-left: 10px;
+						font-size: 14px;
+						display: block;
+						margin-top: 5px;
+					}
+					input {
+						width: 20px;
+						display: block;
+						height: 20px;
+					}
+				}
+				.err {
+					color: #e91919cb;
+					font-size: 14px;
+					margin-top: -10px;
+					margin-bottom: 20px;
+				}
+				.submit {
+					background-color: $red;
+					display: block;
+					border: none;
+					border-radius: 10px;
+					width: 250px;
+					margin: 30px auto;
+					height: 50px;
+					font-size: 16px;
+					font-weight: bold;
+					color: white;
+				}
+			}
+		}
+		#instructions {
+			width: 100%;
+			height: auto;
+			min-height: 400px;
+			// background-color: red;
+			padding: 20px;
+			h3 {
+				text-align: center;
+				text-transform: uppercase;
+				color: $red;
+				margin-bottom: 20px;
+			}
+
+			.instruction {
+				width: 100%;
+				// background-color: yellow;
+				height: auto;
+				@include display(flex, flex-start, flex-start);
+				margin-bottom: 20px;
+				div {
+					color: white;
+					font-size: 14px;
+				}
+				.index {
+					@include display(flex, center, center);
+					margin-right: 10px;
+				}
+			}
+			.proceed_to_payment {
+				color: white;
+				background-color: $red;
+				width: 250px;
+				border: none;
+				display: block;
+				margin: 0 auto;
+				margin-top: 50px;
+				border-radius: 5px;
+				height: 40px;
+			}
+		}
+		#payment {
+			width: 90%;
+			height: 80vh;
+			background-color: red;
+			position: absolute;
+			top: 0;
+			left: -200%;
+			right: 0;
+			margin: 0 auto;
+			form {
+				width: 100%;
+				height: 100%;
+				.actualFormHere {
+					width: 100%;
+					height: 500px;
+					margin-bottom: 20px;
+					background-color: green;
+				}
+				button,
+				input[type="submit"] {
+					display: block;
+					height: 40px;
+					margin: 20px auto;
+					border: 2px solid white;
+					border-radius: 3px;
+					font-size: 14px;
+					text-transform: capitalize;
+					color: white;
+					background-color: transparent;
+					padding: 5px 10px;
+				}
+				input[type="submit"] {
+					margin: 0px auto;
+					background-color: $red;
+					width: 170px;
+					border: none;
+					padding: 5px 20px;
+					color: black;
+				}
+			}
+		}
+	}
+	@-webkit-keyframes animatePaymentIn {
+		0% {
+			left: -200%;
+		}
+		100% {
+			left: 0%;
+		}
+	}
+	@keyframes animatePaymentIn {
+		0% {
+			left: -200%;
+		}
+		100% {
+			left: 0%;
+		}
+	}
+	@-webkit-keyframes animatePaymentOut {
+		0% {
+			left: 0%;
+		}
+		100% {
+			left: -200%;
+		}
+	}
+	@keyframes animatePaymentOut {
+		0% {
+			left: 0%;
+		}
+		100% {
+			left: -200%;
+		}
+	}
+}

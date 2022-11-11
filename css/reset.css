@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Heebo:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 0px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(300deg, #130d34 80%, #9d328c 90%);
+    background: linear-gradient(150deg, #130d34 80%, #9d328c 90%);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .dark {
+    background: #130d34;
+    background: -o-linear-gradient(290deg, #130d34 83%, #9d328c 93%);
+    background: linear-gradient(160deg, #130d34 83%, #9d328c 93%);
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .container .email {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    color: white;
+    font-family: "Cabin", sans-serif;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 10px 20px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+  }
+  .container .email h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+  }
+  .container .email p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #00af50;
+  }
+  .container .email form {
+    margin-top: 20px;
+  }
+  .container .email form input,
+  .container .email form label {
+    display: block;
+  }
+  .container .email form label {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .container .email form input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .container .email form input:focus {
+    outline: none;
+  }
+  .container .email form .err {
+    color: #df12ac;
+    margin-top: -15px;
+    display: none;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .container .email form .form_controls {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+  }
+  .container .email form .form_controls button {
+    background-color: transparent;
+    border-radius: 10px;
+    height: 40px;
+    color: white;
+    width: 40%;
+    border: none;
+    outline: none;
+    font-weight: bold;
+  }
+  .container .email form .form_controls .submit {
+    background-color: #00af50;
+  }
+  .container .email form .form_controls .cancel {
+    background-color: red;
+    margin-left: 10px;
+  }
+}
